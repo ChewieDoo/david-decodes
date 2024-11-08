@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-size: 18px;
+}
+
+body {
+    @apply font-sans text-base;
+    font-weight: 200;
+    margin: 0;
+    padding: 0;
+}
+
+/* Custom text size */
+.hello-text {
+    color: #000;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.intro-text {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.casestudy-title-text {
+    color: #000;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.casestudy-p-text {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+.tag-text {
+    color: #000;
+    text-align: center;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.button-text {
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/*Containers*/
+
+.tag-box-1 {
+    display: flex;
+    padding: 6px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 110px;
+    background: rgba(61, 55, 189, 0.50);
+}
+
+.tag-box-2 {
+    display: flex;
+    padding: 6px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 110px;
+    background: #F5F1E9;
+}
+
+.tag-box-3 {
+    display: flex;
+    padding: 6px 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 110px;
+    background: rgba(195, 254, 246, 0.50);
+}
+
+.button-box {
+    padding: 12px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+}
+
+.button-box:hover {
+    background: black;
+    color: white;
+    font-style: normal;
+    transition: all;
+    transition-duration: 300ms;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
+.nav-item {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    position: relative;
+    transition: padding-left 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-item::before {
+    /*::before selected content without changing the html structure*/
+    content: '';
+    /*create pseudo element which the line will appear from*/
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 1.6px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.nav-item:hover {
+    padding-left: 2.25rem;
+    font-weight: 500;
+}
+
+.nav-item:hover::before {
+    width: 1.88rem;
+}
+
+
+/* Animations */
+@layer components {
+    .socials-icon {
+        @apply relative flex items-center justify-center w-9 h-9 bg-icon-gray bg-opacity-75 text-white hover:bg-opacity-100 rounded-3xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
+    }
+
+}
