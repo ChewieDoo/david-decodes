@@ -1,6 +1,12 @@
-# React + Vite
+# Launching david.decodes
 
 My profile coded in React Framework with Tailwind CSS.
+
+Task for the day:
+
+1. Create DataContext (put in functions, create case study objects)
+2. Destructure HomePage
+3. Organize index.css
 
 Tasks:
 

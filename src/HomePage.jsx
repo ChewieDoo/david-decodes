@@ -1,11 +1,11 @@
 import { FaInstagram, FaGithub, FaYoutube } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
-
-const handleEmailClick = () => {
-  window.location.href = `mailto:${"xdu018@gmail.com"}`;
-};
+import { useGlobalContext } from "./Context";
 
 const HomePage = () => {
+  const handleEmailClick = () => {
+    window.location.href = `mailto:${"xdu018@gmail.com"}`;
+  };
   return (
     <div className='flex flex-col md:flex-row mt-9 mb-9 ml-9 mr-0.5'>
       <div className='w-full md:w-1/4'>
@@ -43,88 +43,16 @@ const HomePage = () => {
       </div>
       <div className='w-full md:w-3/4'>
         <div className='grid grid-cols-1 md:grid-cols-2'>
-          <div className='mr-8 mb-12'>
-            <img src='src/assets/depop-mockup.jpg' className='mb-2.5'></img>
-            <div className='mb-4'>
-              <ul className='tag-text flex flex-row gap-1'>
-                <li className='tag-box-1'>E-commerce</li>
-                <li className='tag-box-1'>Added-feature</li>
-                <li className='tag-box-1'>Sustainability</li>
-              </ul>
-            </div>
-            <div>
-              <h2 className='casestudy-title-text mb-3'>Depop</h2>
-              <p className='casestudy-p-text mb-6'>
-                How to introduce and integrate a cloth-rental feature onto a
-                popular e-commerce and online thrifting mobile app?
-              </p>
-              <a
-                className='button-text button-box'
-                href='https://juniper-room-602.notion.site/Rent-a-Depop-48ae1bd3a910401bb4e2f37ca0f4df20?pvs=74'>
-                VIEW CASE STUDY
-              </a>
-            </div>
-          </div>
-          <div className='mr-8 mb-12'>
-            <img src='src/assets/zara-mockup.jpg' className='mb-2.5'></img>
-            <div className='mb-4'>
-              <ul className='tag-text flex flex-row gap-1'>
-                <li className='tag-box-2'>Fashion</li>
-                <li className='tag-box-2'>Responsive Web Design</li>
-                <li className='tag-box-2'>Navigation</li>
-              </ul>
-            </div>
-            <div>
-              <h2 className='casestudy-title-text mb-4'>Zara</h2>
-            </div>
-            <div>
-              <p className='casestudy-p-text mb-6'>
-                How to help online shoppers easily find products and unique
-                clothing collections on a fast-fashion website?
-              </p>
-            </div>
-            <div>
-              <a
-                className='button-text button-box'
-                href='https://juniper-room-602.notion.site/Frictionless-Fashion-e42e92b056c2427283b3b3f206a64623?pvs=74'>
-                VIEW CASE STUDY
-              </a>
-            </div>
-          </div>
-          <div className='mr-8 mb-12'>
-            <img src='src/assets/fearless-mockup.jpg' className='mb-2.5'></img>
-            <div className='mb-4'>
-              <ul className='tag-text flex flex-row gap-1'>
-                <li className='tag-box-3'>Web Development</li>
-                <li className='tag-box-3'>JavaScript</li>
-                <li className='tag-box-3'>React Framework</li>
-                <li className='tag-box-3'>Tailwind CSS</li>
-              </ul>
-            </div>
-            <div>
-              <h2 className='casestudy-title-text mb-4'>KPOP</h2>
-            </div>
-            <div>
-              <p className='casestudy-p-text mb-6'>
-                How to develop a reactive website for award-winning Kpop girl
-                group LeSserafim with ReactJS and Tailwind CSS framework?
-              </p>
-            </div>
-            <div>
-              <a
-                className='button-text button-box'
-                href='https://github.com/ChewieDoo/fearless2'>
-                VIEW CASE STUDY
-              </a>
-            </div>
-          </div>
+          <CaseStudyCard id='0' />
+          <CaseStudyCard id='1' />
+          <CaseStudyCard id='2' />
         </div>
       </div>
     </div>
   );
 };
 
-const NavIcon = ({ icon, href, text }) => {
+const NavIcon = ({ icon, href }) => {
   if (href) {
     return (
       <a
@@ -137,6 +65,31 @@ const NavIcon = ({ icon, href, text }) => {
     );
   }
   return <div className='socials-icon group'>{icon}</div>;
+};
+
+const CaseStudyCard = ({ id }) => {
+  const { caseStudies } = useGlobalContext();
+  return (
+    <div className='mr-8 mb-12'>
+      <img src={caseStudies[id].coverPhoto} className='mb-2.5'></img>
+      <div className='mb-4'>
+        <ul className='tag-text flex flex-row gap-1'>
+          {caseStudies[id].tags.map((tag, index) => (
+            <li className={caseStudies[id].themeColor} key={index}>
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 className='casestudy-title-text mb-3'>{caseStudies[id].name}</h2>
+        <p className='casestudy-p-text mb-6'>{caseStudies[id].text}</p>
+        <a className='button-text button-box' href={caseStudies[id].link}>
+          VIEW CASE STUDY
+        </a>
+      </div>
+    </div>
+  );
 };
 
 export default HomePage;
