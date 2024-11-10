@@ -2,11 +2,9 @@
 
 My profile coded in React Framework with Tailwind CSS.
 
-Task for the day:
+The code is destructured so that if any changes need to be made, I just need to edit the JS object that I have created inside `Context.jsx`. The React components uses the data context to then render specific parts of the webpage.
 
-1. Create DataContext (put in functions, create case study objects)
-2. Destructure HomePage
-3. Organize index.css
+I try to keep the jsx components below 100 lines when possible and destructure as much as I can to make it easy to read and understand.
 
 Tasks:
 
@@ -15,3 +13,4 @@ Tasks:
 - Organize code into React framework (data context, Tailwind components, etc.)
 - Develop Zara page
 - Develop Depop page
+- Deploy website
