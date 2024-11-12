@@ -8,9 +8,9 @@ I try to keep the jsx components below 100 lines when possible and destructure a
 
 Tasks:
 
-- COMPLETE: Figure out responsive CSS (when in mobile or smaller display size, wrap the social icons around)
-- COMPLETE: Route up the links
-- Organize code into React framework (data context, Tailwind components, etc.)
+- COMPLETED Figure out responsive CSS (when in mobile or smaller display size, wrap the social icons around)
+- COMPLETED Route up the links
+- COMPLETED Organize code into React framework (data context, Tailwind components, etc.)
 - Develop Zara page
 - Develop Depop page
 - Deploy website
