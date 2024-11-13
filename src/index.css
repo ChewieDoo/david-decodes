@@ -116,12 +116,9 @@ body {
 }
 
 .nav-item {
-    color: #000;
-    font-size: 18px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-
     position: relative;
     transition: padding-left 0.3s ease;
     cursor: pointer;
@@ -149,6 +146,27 @@ body {
 .nav-item:hover::before {
     width: 1.88rem;
 }
+
+
+.nav-item-active {
+    font-weight: 500;
+    padding-left: 2.25rem;
+    position: relative;
+    line-height: normal;
+    font-style: normal;
+}
+
+.nav-item-active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.88rem;
+    height: 1.6px;
+    background-color: black;
+}
+
+
 
 
 /* Animations */
