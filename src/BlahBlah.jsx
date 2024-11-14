@@ -20,7 +20,9 @@ const NavCol = () => {
           <NavLink
             to='/'
             className={({ isActive }) =>
-              isActive ? "nav-item-active" : "nav-item"
+              isActive
+                ? "nav-item-active Sk-Modernist-Bold"
+                : "nav-item Sk-Modernist"
             }>
             Work
           </NavLink>
@@ -29,7 +31,9 @@ const NavCol = () => {
           <NavLink
             to='/resume'
             className={({ isActive }) =>
-              isActive ? "nav-item-active" : "nav-item"
+              isActive
+                ? "nav-item-active Sk-Modernist-Bold"
+                : "nav-item Sk-Modernist"
             }>
             Resume
           </NavLink>
@@ -38,7 +42,9 @@ const NavCol = () => {
           <NavLink
             to='/gallery'
             className={({ isActive }) =>
-              isActive ? "nav-item-active" : "nav-item"
+              isActive
+                ? "nav-item-active Sk-Modernist-Bold"
+                : "nav-item Sk-Modernist"
             }>
             Gallery
           </NavLink>
@@ -69,19 +75,19 @@ const Socials = () => {
   };
 
   return (
-    <footer className='mt-12 md:mt-56'>
-      <div className='flex flex-row gap-3'>
+    <footer className='mt-12 md:mt-52'>
+      <div className='flex flex-row gap-4'>
         <NavIcon
-          icon={<FaInstagram size='28' />}
+          icon={<FaInstagram size='22' />}
           href='https://www.instagram.com/jungkook_bighitentertainment/'></NavIcon>
         <NavIcon
-          icon={<FaGithub size='28' />}
+          icon={<FaGithub size='22' />}
           href='https://github.com/ChewieDoo'></NavIcon>
         <NavIcon
-          icon={<FaYoutube size='28' />}
+          icon={<FaYoutube size='22' />}
           href='https://www.youtube.com/@Zinggzouu'></NavIcon>
         <NavIcon
-          icon={<MdEmail size='28' onClick={handleEmailClick} />}></NavIcon>
+          icon={<MdEmail size='22' onClick={handleEmailClick} />}></NavIcon>
       </div>
     </footer>
   );

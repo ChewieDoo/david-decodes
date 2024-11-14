@@ -1,7 +1,4 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import depopMockup from "./assets/depop-mockup.jpg";
-import zaraMockup from "./assets/zara-mockup.jpg";
-import fearlessMockup from "./assets/fearless-mockup.jpg";
 
 const AppContext = React.createContext();
 
@@ -10,7 +7,7 @@ const AppProvider = ({ children }) => {
     {
       id: 0,
       title: "Rent a Depop",
-      coverPhoto: depopMockup,
+      coverPhoto: "src/assets/depop-mockup.jpg",
       themeColor: "tag-box-1",
       tags: ["E-commerce", "Added-feature", "Sustainability"],
       name: "Depop",
@@ -20,17 +17,17 @@ const AppProvider = ({ children }) => {
     {
       id: 1,
       title: "Frictionless Fashion",
-      coverPhoto: zaraMockup,
+      coverPhoto: "src/assets/zara-mockup.jpg",
       themeColor: "tag-box-2",
       tags: ["Fashion", "Responsive Web Design", "Navigation"],
       name: "Zara",
       text: "How to help online shoppers easily find products and unique clothing collections on a fast-fashion website?",
-      link: "https://juniper-room-602.notion.site/Frictionless-Fashion-e42e92b056c2427283b3b3f206a64623?pvs=74",
+      link: "/frictionless",
     },
     {
       id: 2,
       title: "Fearless",
-      coverPhoto: fearlessMockup,
+      coverPhoto: "src/assets/fearless-mockup.jpg",
       themeColor: "tag-box-3",
       tags: ["Web Development", "JavaScript", "React", "Tailwind CSS"],
       name: "KPOP",

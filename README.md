@@ -13,13 +13,14 @@ Tasks:
 - COMPLETED Organize code into React framework (data context, Tailwind components, etc.)
 - Develop Zara page (build out prototype, create skeleton HTML, styling, destructure)
 - Develop Depop page
-- Deploy website
+- COMPLETED Deploy website
 
 Zara Page:
 
-1. Build out basic HTML skeleton for 2 sections
-2. Style it -> create common Tailwind components that can be applied to other sections
-3. Destructure for different sections
-4. Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
-5. Destructure for entire webpage (create state hooks for entire page)
-6. The idea is to create template to build up all the pages
+1. REMOVED Add in an image loader
+2. Build out basic HTML skeleton for 2 sections
+3. Style it -> create common Tailwind components that can be applied to other sections
+4. Destructure for different sections
+5. Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
+6. Destructure for entire webpage (create state hooks for entire page)
+7. The idea is to create template to build up all the pages
