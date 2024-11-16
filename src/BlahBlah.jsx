@@ -75,7 +75,7 @@ const Socials = () => {
   };
 
   return (
-    <footer className='mt-12 md:mt-52'>
+    <footer className='mt-12 md:mt-44'>
       <div className='flex flex-row gap-4'>
         <NavIcon
           icon={<FaInstagram size='22' />}

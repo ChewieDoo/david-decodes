@@ -18,9 +18,7 @@ Tasks:
 Zara Page:
 
 1. REMOVED Add in an image loader
-2. Build out basic HTML skeleton for 2 sections
-3. Style it -> create common Tailwind components that can be applied to other sections
-4. Destructure for different sections
-5. Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
-6. Destructure for entire webpage (create state hooks for entire page)
-7. The idea is to create template to build up all the pages
+2. COMPLETED Build out basic HTML skeleton for 2 sections
+3. COMPLETED Style it -> create common Tailwind components that can be applied to other sections
+4. Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
+5. Destructure - templating

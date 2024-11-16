@@ -29,6 +29,7 @@ body {
   padding: 0;
 }
 
+/* Home Page customization*/
 /* Custom text size */
 .hello-text {
   color: #000;
@@ -186,4 +187,121 @@ body {
   .socials-icon {
     @apply relative flex items-center justify-center w-8 h-8 bg-icon-gray bg-opacity-75 text-white hover:bg-opacity-100 rounded-3xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
   }
+}
+
+/* Case study styling */
+.big-text {
+  font-size: 42px;
+}
+.title-container {
+  background-color: white;
+  margin-top: -480px;
+  margin-left: 36px;
+  margin-right: 36px;
+  position: relative;
+  z-index: 1000;
+  width: fit-content;
+}
+.main-container {
+  margin-left: 36px;
+  margin-right: 36px;
+  z-index: 1000;
+}
+.main-container-background {
+  background-color: white;
+  position: relative;
+  z-index: 1100;
+}
+.project-tag {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.section-container {
+  @apply main-container;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-bottom: 96px;
+}
+.section-container-wide {
+  @apply main-container;
+  padding-left: 122px;
+  padding-right: 122px;
+  margin-bottom: 96px;
+}
+
+.section-title {
+  font-size: 42px;
+  font-weight: 500;
+  margin-bottom: 42px;
+}
+.medium-text {
+  font-size: 24px;
+}
+blockquote {
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+}
+blockquote footer {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: right;
+}
+.callout {
+  border: 1px solid black;
+  margin-top: 36px;
+  margin-bottom: 36px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.callout-sm {
+  @apply callout;
+  margin-left: 112px;
+  margin-right: 112px;
+}
+.section-title-sm {
+  @apply section-title;
+  font-size: 36px;
+}
+.section-gray-background {
+  background-color: #e9e9ea;
+}
+.small-title {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.sub-section-container {
+  margin-bottom: 64px;
+}
+.sub-section-title {
+  font-size: 28px;
+  margin-bottom: 36px;
+  font-weight: 500;
+}
+
+ul.bullet-points {
+  list-style-type: disc;
+  padding-left: 24px;
+}
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
