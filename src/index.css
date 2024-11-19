@@ -10,25 +10,21 @@
   font-family: "Sk-Modernist-Bold";
   src: url("./assets/fonts/Sk-Modernist-Bold.otf") format("truetype");
 }
-
 .Sk-Modernist {
   font-family: "Sk-Modernist-Regular", sans-serif;
 }
 .Sk-Modernist-Bold {
   font-family: "Sk-Modernist-Bold", sans-serif;
 }
-
 html {
   font-size: 18px;
 }
-
 body {
   @apply font-sans text-base;
   font-weight: 200;
   margin: 0;
   padding: 0;
 }
-
 /* Home Page customization*/
 /* Custom text size */
 .hello-text {
@@ -38,7 +34,6 @@ body {
   font-weight: 500;
   line-height: normal;
 }
-
 .intro-text {
   color: #000;
   font-size: 16px;
@@ -46,7 +41,6 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-
 .casestudy-title-text {
   color: #000;
   font-size: 48px;
@@ -54,7 +48,6 @@ body {
   font-weight: 500;
   line-height: normal;
 }
-
 .casestudy-p-text {
   color: #000;
   font-size: 18px;
@@ -62,7 +55,6 @@ body {
   font-weight: 300;
   line-height: normal;
 }
-
 .tag-text {
   color: #000;
   text-align: center;
@@ -71,7 +63,6 @@ body {
   font-weight: 500;
   line-height: normal;
 }
-
 .button-text {
   color: #000;
   text-align: center;
@@ -80,9 +71,7 @@ body {
   font-weight: 400;
   line-height: normal;
 }
-
-/*Containers*/
-
+/*HomePage*/
 .tag-box-1 {
   display: flex;
   padding: 6px 15px;
@@ -92,7 +81,6 @@ body {
   border-radius: 110px;
   background: rgba(61, 55, 189, 0.5);
 }
-
 .tag-box-2 {
   display: flex;
   padding: 6px 15px;
@@ -102,7 +90,6 @@ body {
   border-radius: 110px;
   background: #f5f1e9;
 }
-
 .tag-box-3 {
   display: flex;
   padding: 6px 15px;
@@ -112,7 +99,6 @@ body {
   border-radius: 110px;
   background: rgba(195, 254, 246, 0.5);
 }
-
 .button-box {
   padding: 12px 20px;
   justify-content: center;
@@ -121,7 +107,6 @@ body {
   background: #e9e9ea;
   border-radius: 110px;
 }
-
 .button-box:hover {
   background: black;
   color: white;
@@ -131,7 +116,6 @@ body {
   transition-timing-function: linear;
   cursor: pointer;
 }
-
 .nav-item {
   font-style: normal;
   font-weight: 300;
@@ -140,11 +124,8 @@ body {
   transition: padding-left 0.3s ease;
   cursor: pointer;
 }
-
 .nav-item::before {
-  /*::before selected content without changing the html structure*/
   content: "";
-  /*create pseudo element which the line will appear from*/
   position: absolute;
   left: 0;
   top: 50%;
@@ -154,16 +135,13 @@ body {
   background-color: black;
   transition: width 0.3s ease;
 }
-
 .nav-item:hover {
   padding-left: 2.25rem;
   font-weight: 500;
 }
-
 .nav-item:hover::before {
   width: 1.88rem;
 }
-
 .nav-item-active {
   font-weight: 500;
   padding-left: 2.25rem;
@@ -171,7 +149,6 @@ body {
   line-height: normal;
   font-style: normal;
 }
-
 .nav-item-active::before {
   content: "";
   position: absolute;
@@ -181,7 +158,6 @@ body {
   height: 1.6px;
   background-color: black;
 }
-
 /* Animations */
 @layer components {
   .socials-icon {
@@ -190,21 +166,30 @@ body {
 }
 
 /* Case study styling */
+.casestudy-text {
+  @apply: text-[18px];
+}
 .big-text {
-  font-size: 42px;
+  @apply text-[32px] md:text-[42px];
 }
 .title-container {
   background-color: white;
-  margin-top: -480px;
+  margin-top: -424px;
   margin-left: 36px;
   margin-right: 36px;
   position: relative;
   z-index: 1000;
   width: fit-content;
 }
+.tag-container {
+  @apply grid grid-cols-2 px-8 md:flex md:flex-row md:px-24 md:gap-48 
+  justify-center items-start;
+}
+.tag-container p {
+  @apply text-[14px] md:text-[18px];
+}
 .main-container {
-  margin-left: 36px;
-  margin-right: 36px;
+  @apply mx-4 md:mx-9 justify-center;
   z-index: 1000;
 }
 .main-container-background {
@@ -213,40 +198,35 @@ body {
   z-index: 1100;
 }
 .project-tag {
-  font-size: 20px;
+  @apply text-[16px] md:text-[20px] mb-2 mt-6 md:mb-4 md:mt-12;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 .section-container {
-  @apply main-container;
-  padding-left: 200px;
-  padding-right: 200px;
+  @apply main-container md:mx-[242px];
   margin-bottom: 96px;
 }
 .section-container-wide {
-  @apply main-container;
-  padding-left: 122px;
-  padding-right: 122px;
+  @apply main-container md:px-[122px];
   margin-bottom: 96px;
 }
-
 .section-title {
-  font-size: 42px;
+  @apply text-[32px] md:text-[42px];
   font-weight: 500;
   margin-bottom: 42px;
 }
 .medium-text {
-  font-size: 24px;
+  @apply md:text-[24px] text-[20px];
 }
 blockquote {
-  font-size: 18px;
+  @apply md:text-[18px] md:ml-32 md:mr-32 text-[14px] ml-8 mr-8 mb-16;
   font-style: italic;
   font-weight: 500;
   line-height: normal;
 }
 blockquote footer {
-  font-size: 18px;
+  @apply md:text-[18px] text-[14px];
   font-style: normal;
   font-weight: 300;
   line-height: normal;
@@ -254,17 +234,10 @@ blockquote footer {
 }
 .callout {
   border: 1px solid black;
-  margin-top: 36px;
-  margin-bottom: 36px;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  padding-left: 20px;
-  padding-right: 20px;
+  @apply my-[36px] py-[18px] px-[20px];
 }
 .callout-sm {
-  @apply callout;
-  margin-left: 112px;
-  margin-right: 112px;
+  @apply callout md:mx-[112px];
 }
 .section-title-sm {
   @apply section-title;
@@ -272,6 +245,21 @@ blockquote footer {
 }
 .section-gray-background {
   background-color: #e9e9ea;
+}
+.process-container {
+  @apply grid grid-cols-2 md:flex md:flex-row justify-center md:gap-24 items-start;
+}
+.image-text-container-l {
+  @apply md:flex md:flex-row md:-ml-32;
+}
+.image-text-container-r {
+  @apply md:flex md:flex-row md:-mr-32;
+}
+.image-container-l {
+  @apply md:w-2/3 md:pr-28;
+}
+.image-container-r {
+  @apply md:w-2/3 md:pl-28;
 }
 .small-title {
   font-size: 18px;
@@ -286,18 +274,16 @@ blockquote footer {
   margin-bottom: 36px;
   font-weight: 500;
 }
-
 ul.bullet-points {
   list-style-type: disc;
   padding-left: 24px;
 }
 .video-responsive {
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
 }
-
 .video-responsive iframe {
   position: absolute;
   top: 0;

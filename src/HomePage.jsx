@@ -33,7 +33,7 @@ const CaseStudyCard = ({ id }) => {
     <div className='mr-8 mb-12'>
       <img src={caseStudies[id].coverPhoto} className='mb-2.5'></img>
       <div className='mb-4'>
-        <ul className='tag-text flex flex-row gap-1 Sk-Modernist'>
+        <ul className='tag-text flex flex-row gap-1 Sk-Modernist-bold'>
           {caseStudies[id].tags.map((tag, index) => (
             <li className={caseStudies[id].themeColor} key={index}>
               {tag}

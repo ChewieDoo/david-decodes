@@ -20,5 +20,15 @@ Zara Page:
 1. REMOVED Add in an image loader
 2. COMPLETED Build out basic HTML skeleton for 2 sections
 3. COMPLETED Style it -> create common Tailwind components that can be applied to other sections
-4. Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
-5. Destructure - templating
+4. COMPLETE Make case study responsive
+   _NOTE_ When in large display, things a bit funky... the content is not centered
+5. Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
+6. Add in image loading function so website loads in time
+7. Destructure - CSS, JSX
+8. Deploy
+
+Making it responsive:
+
+- Container borders
+- Font size
+- Behavior / wrapping

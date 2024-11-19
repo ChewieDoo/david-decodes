@@ -3,16 +3,16 @@ import { useGlobalContext } from "./Context";
 
 const ZaraCaseStudy = () => {
   return (
-    <div>
+    <div className='casestudy-text'>
       <div className='relative h-screen'>
         <img
-          src='src/assets/zaraResource/zara-cover-photo-small.jpg'
+          src='src/assets/zaraResource/zara-cover-photo-smaller.jpg'
           alt='Zara cover photo'
-          className='sticky top-0 w-full h-auto object-cover'
+          className='sticky top-0 w-full h-[472px] object-cover'
         />
       </div>
 
-      <div className='title-container h-32 flex items-end'>
+      <div className='title-container h-24 flex items-end'>
         <div className='h-full'>
           <img
             src='src/assets/zaraResource/zara-logo.jpg'
@@ -25,49 +25,47 @@ const ZaraCaseStudy = () => {
       </div>
 
       <div className='main-container-background'>
-        <section className='mt-3'>
-          <div className='flex flex-row gap-48 justify-center items-start'>
-            <div>
-              <h3 className='project-tag mb-4 mt-12'>ACTIVITIES</h3>
-              <p>UX Research</p>
-              <p>UX Design</p>
-              <p>UX Wireframing</p>
-              <p>Interaction Design</p>
-              <p>Prototyping</p>
-            </div>
-            <div>
-              <h3 className='project-tag mb-4 mt-12'>DELIVERABLES</h3>
-              <p>Aug 30 - Oct 28</p>
-              <p>4 weeks</p>
-            </div>
+        <section className='tag-container mt-3'>
+          <div className='w-full'>
+            <h3 className='project-tag'>ACTIVITIES</h3>
+            <p>UX Research</p>
+            <p>UX Design</p>
+            <p>UX Wireframing</p>
+            <p>Interaction Design</p>
+            <p>Prototyping</p>
+          </div>
+          <div className='w-full'>
+            <h3 className='project-tag '>TIMELINE</h3>
+            <p>Aug 30 - Oct 28</p>
+            <p>4 weeks</p>
+          </div>
 
-            <div>
-              <h3 className='project-tag mb-4 mt-12'>DELIVERABLES</h3>
-              <p>High-fidelity prototype</p>
-              <p>Presentation</p>
-              <p>Case study website</p>
-            </div>
+          <div className='w-full'>
+            <h3 className='project-tag '>DELIVERABLES</h3>
+            <p>High-fidelity prototype</p>
+            <p>Presentation</p>
+            <p>Case study website</p>
+          </div>
 
-            <div>
-              <h3 className='project-tag mb-7 mt-12'>TOOLS</h3>
-              <p>Figma</p>
-              <p>Qualtrics</p>
-              <p>React JS</p>
-            </div>
+          <div className='w-full'>
+            <h3 className='project-tag '>TOOLS</h3>
+            <p>Figma</p>
+            <p>Qualtrics</p>
+            <p>React JS</p>
           </div>
         </section>
 
         <section className='section-container mt-16'>
           <div className='mb-16'>
             <h2 className='section-title'>
-              Design a frictionless online shopping experience.
+              Design a frictionless online shopping experience
             </h2>
             <p className='medium-text mb-16'>
               Zara is a global leader in fast fashion and its stores offer the
               widest selection of the trendiest clothing for shoppers.
             </p>
 
-            <blockquote className='ml-32 mr-32 mb-16'>
+            <blockquote>
               <p className='mb-6'>
                 “Fast fashion industry continues to grow rapidly and is expected
                 to reach $142.06 billion by the end of 2024 at a CAGR of 15.5%.”
@@ -124,9 +122,9 @@ const ZaraCaseStudy = () => {
           </p>
 
           <p className='mb-6'>
-            According to user psychology,
+            According to user psychology,&nbsp;
             <span className='font-medium'>
-              navigation is the most common source of bad friction on websites.
+              navigation is a common source of bad friction on many websites.
             </span>
           </p>
           <p className='mb-6'>
@@ -143,29 +141,29 @@ const ZaraCaseStudy = () => {
         <div className='section-gray-background'>
           <section className='section-container-wide py-5'>
             <h3 className='small-title mb-3'>MY PROCESS</h3>
-            <div className='flex flex-row justify-center gap-24 items-start'>
-              <div className='w-1/4 '>
+            <div className='process-container'>
+              <div className='md:w-1/4 mb-4 md:mb-0'>
                 <h3 className='medium-text mb-3 font-medium'>01 Discovery</h3>
                 <p className='max-w-36'>
                   Research to understand our users and their challenges
                 </p>
               </div>
 
-              <div className='w-1/4 '>
+              <div className='md:w-1/4 mb-4 md:mb-0'>
                 <h3 className='medium-text mb-3 font-medium'>02 Define</h3>
                 <p className='max-w-36'>
                   Turn research into actionable insights
                 </p>
               </div>
 
-              <div className='w-1/4 '>
+              <div className='md:w-1/4 mb-4 md:mb-0'>
                 <h3 className='medium-text mb-3 font-medium'>03 Design</h3>
                 <p className='max-w-36'>
                   Brainstorm design solutions to address frictions
                 </p>
               </div>
 
-              <div className='w-1/4 '>
+              <div className='md:w-1/4 mb-4 md:mb-0'>
                 <h3 className='medium-text mb-3 font-medium'>04 Deliver</h3>
                 <p className='max-w-36'>Put it all together</p>
               </div>
@@ -206,13 +204,16 @@ const ZaraCaseStudy = () => {
               categories. It is hard to find the navigation menu. The text size
               is small and barely visible against the colored background.
             </p>
-            <div className='flex flex-row mb-2'>
-              <img
-                src='src/assets/zaraResource/original-product-page.jpg'
-                alt='Original product page'
-                className='w-2/3'
-              />
-              <div className='w-1/3'>
+
+            <div className='image-text-container-l items-center gap-2 mb-6 '>
+              <div className='image-container-l'>
+                <img
+                  src='src/assets/zaraResource/original-product-page.jpg'
+                  alt='Original product page'
+                />
+              </div>
+
+              <div className='mt-6 md:w-1/3 md:mt-0'>
                 <p className='mb-6'>
                   The shop layouts deviates from typical UI patterns we see on
                   other e-commerce websites, where we see product cards
@@ -224,8 +225,9 @@ const ZaraCaseStudy = () => {
                 </p>
               </div>
             </div>
-            <div className='flex flex-row'>
-              <div className='w-1/3'>
+
+            <div className='image-text-container-r gap-2 items-center'>
+              <div className='md:w-1/3'>
                 <p className='mb-6'>
                   The lack of visual cues make it clunky to navigate.
                 </p>
@@ -242,11 +244,12 @@ const ZaraCaseStudy = () => {
                   very top right corner.
                 </p>
               </div>
-              <img
-                src='src/assets/zaraResource/origina-call-to-action.jpg'
-                alt='Original call to action'
-                className='w-2/3'
-              />
+              <div className='image-container-r md:-mt-0'>
+                <img
+                  src='src/assets/zaraResource/origina-call-to-action.jpg'
+                  alt='Original call to action'
+                />
+              </div>
             </div>
           </div>
 
@@ -293,14 +296,14 @@ const ZaraCaseStudy = () => {
           <div className='sub-section-container'>
             <h3 className='sub-section-title '>Persona</h3>
             <p className='mb-6'>Meet Ed</p>
-            <div className='grid grid-cols-2'>
-              <div className='pr-52 pb-6 max-w-96'>
+            <div className='grid grid-cols-1 md:grid-cols-2'>
+              <div className='pr-52 md:pb-6 max-w-96'>
                 <img
                   src='src/assets/zaraResource/user-profile.png'
                   alt='User profile'
                 />
               </div>
-              <div className='callout max-w-96'>
+              <div className='callout max-w-96 '>
                 <p className='font-medium mb-2'>Bio</p>
                 <p>
                   Ed is a fashion enthusiast, eager to browse new pieces and
@@ -309,7 +312,7 @@ const ZaraCaseStudy = () => {
                   pieces online and trying them at physical stores.
                 </p>
               </div>
-              <div className='callout max-w-96'>
+              <div className='callout max-w-96 '>
                 <p className='font-medium mb-2'>Goals</p>
                 <ul className='bullet-points'>
                   <li>
@@ -323,7 +326,7 @@ const ZaraCaseStudy = () => {
                   <li>Check their availability in-store.</li>
                 </ul>
               </div>
-              <div className='callout max-w-96'>
+              <div className='callout max-w-96 '>
                 <p className='font-medium mb-2'>Challenges</p>
                 <ul className='bullet-points'>
                   <li>
@@ -480,21 +483,23 @@ const ZaraCaseStudy = () => {
             out the home page, search page, product categories page, as well as
             collections page to demonstrate this.
           </p>
-          <div>
+          <div className='-mx-40'>
             <img
               src='src/assets/zaraResource/zara-wireframe-small.jpg'
               alt='Wire frame'
-              className='overflow-visible h-full'
+              className='h-full'
             />
           </div>
-          <div className='sub-section-container'>
+          <div className='sub-section-container mt-20'>
             <h3 className='sub-section-title'>The Brand</h3>
             <p className='mb-9'>
               Zara’s brand identity is best described as embodying a
               minimalistic editorial magazine with a strong emphasis on its
               collection pieces.
             </p>
-            <img src='src/assets/zaraResource/style.jpg' alt='Zara brand' />
+            <div className='-mx-[242px]'>
+              <img src='src/assets/zaraResource/style.jpg' alt='Zara brand' />
+            </div>
           </div>
           <div className='sub-section-container'>
             <h3 className='sub-section-title'>UI Kit</h3>
@@ -523,11 +528,14 @@ const ZaraCaseStudy = () => {
                 click in an e-commerce website, my design embeds the navigation
                 panel within the search bar.
               </p>
-              <img
-                src='src/assets/zaraResource/navigation-frame.jpg'
-                alt='Navigation panels'
-                className='mb-9'
-              />
+              <div className='-mx-40'>
+                <img
+                  src='src/assets/zaraResource/navigation-frame.jpg'
+                  alt='Navigation panels'
+                  className='mb-9'
+                />
+              </div>
+
               <p className='mb-9'>
                 Having the navigation panel take up the whole page allows the
                 user to view all product categories without the need to scroll.
@@ -538,18 +546,20 @@ const ZaraCaseStudy = () => {
                 Horizontal browsing for collections and vertical scroll for
                 collection content
               </p>
-              <img
-                src='src/assets/zaraResource/collection-slider.jpg'
-                alt='Collection slider navigation'
-              />
+              <div className='-mx-40'>
+                <img
+                  src='src/assets/zaraResource/collection-slider.jpg'
+                  alt='Collection slider navigation'
+                />
+              </div>
 
-              <div className='flex flex-row mb-9'>
+              <div className='image-text-container-l items-center gap-2 mb-9'>
                 <img
                   src='src/assets/zaraResource/navigation-image-2.jpg'
                   alt='Sample collections content'
-                  className='w-2/3'
+                  className='image-container-l'
                 />
-                <div className='w-1/3'>
+                <div className='md:w-1/3 mt-6 md:-mt-48'>
                   <p className='mb-6'>
                     Consistent designs across the website makes navigation more
                     intuitive. I replicated how collection pages are laid out to
@@ -567,18 +577,20 @@ const ZaraCaseStudy = () => {
                 </div>
               </div>
 
-              <div className='flex flex-row mb-9'>
-                <div className='w-1/3'>
+              <div className='image-text-container-r gap-2 mb-9'>
+                <div className='md:w-1/3'>
                   <div>
                     <p className='font-medium mb-6'>Availability in store</p>
                     <p className='mb-6'>
                       I created additional filter criteria that allow users to
                       find all items available at a specified store.
                     </p>
-                    <p>Users can search by postcode or keywords.</p>
+                    <p className='mb-6 md:mb-0'>
+                      Users can search by postcode or keywords.
+                    </p>
                   </div>
                 </div>
-                <div className='w-2/3'>
+                <div className='image-container-r'>
                   <img
                     src='src/assets/zaraResource/store-availability.jpg'
                     alt='Store availability filter'
@@ -587,30 +599,35 @@ const ZaraCaseStudy = () => {
               </div>
             </div>
 
-            <div className='mb-9'>
-              <p className='font-medium mb-6'>UI LAYOUT</p>
-              <p className='font-medium mb-6'>
-                Consistent design across product category pages (left) and
-                search pages (right)
-              </p>
-              <img
-                src='src/assets/zaraResource/filter.jpg'
-                alt='Product filter'
-                className='mb-6'
-              />
-              <p>
-                This involved having the same filters at the top across pages
-                and their visual designs consistent. I also made all filters
-                visible to the user without the need to click on an additional
-                page.
-              </p>
+            <p className='font-medium mb-9'>UI LAYOUT</p>
+
+            <div className='image-text-container-l items-center gap-2 mb-9'>
+              <div className='image-container-l'>
+                <img
+                  src='src/assets/zaraResource/filter-stack.jpg'
+                  alt='Product filter'
+                  className='mb-6'
+                />
+              </div>
+              <div className='md:w-1/3'>
+                <p className='font-medium mb-6 md:-mt-56'>
+                  Consistent design across product category pages (top) and
+                  search pages (bottom)
+                </p>
+                <p>
+                  This involved having the same filters at the top across pages
+                  and their visual designs consistent. I also made all filters
+                  visible to the user without the need to click on an additional
+                  page.
+                </p>
+              </div>
             </div>
 
             <div className='mb-9'>
               <p className='font-medium mb-6'>VISUAL AFFORDANCE</p>
-              <div className='flex flex-row mb-8'>
-                <div className='w-1/3'>
-                  <p className='font-medium mb-6'>
+              <div className='image-text-container-r items-center mb-9'>
+                <div className='md:w-1/3 mb-6 md:mb-0'>
+                  <p className='font-medium mb-6 md:-mt-48'>
                     Thumbnails as user feedback
                   </p>
                   <p>
@@ -620,20 +637,23 @@ const ZaraCaseStudy = () => {
                     update.
                   </p>
                 </div>
-                <img
-                  src='src/assets/zaraResource/thumb-nail-stack.jpg'
-                  alt='Loading thumb nail'
-                  className='w-2/3'
-                />
+                <div className='image-container-r'>
+                  <img
+                    src='src/assets/zaraResource/thumb-nail-stack.jpg'
+                    alt='Loading thumb nail'
+                  />
+                </div>
               </div>
 
-              <div className='flex flex-row'>
-                <img
-                  src='src/assets/zaraResource/call-to-action.jpg'
-                  alt='Call to action check out'
-                  className='w-2/3'
-                />
-                <div className='w-1/3'>
+              <div className='image-text-container-l items-center mb-9'>
+                <div className='image-container-l'>
+                  <img
+                    src='src/assets/zaraResource/call-to-action.jpg'
+                    alt='Call to action check out'
+                  />
+                </div>
+
+                <div className='md:w-1/3 mt-6 md:-mt-48'>
                   <p className='font-medium mb-6'>Clearer call to action</p>
                   <p>
                     I redesigned the product page to enlarge all text and made
@@ -701,7 +721,7 @@ const ZaraCaseStudy = () => {
               User insights will generate further questions and actions for me
               to act upon to improve my design.
             </p>
-            <h3 className='sub-section-title'>What’s next?</h3>
+            <h3 className='sub-section-title'>What I've learned</h3>
             <p className='mb-6'>
               Having my initial understanding of the Zara website’s situation is
               equally as important as listening to the user. The initial website
