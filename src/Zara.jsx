@@ -1,7 +1,11 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import { useGlobalContext } from "./Context";
+import ImageModal from "./ImageModal";
+import SideBar from "./SideBar";
 
 const ZaraCaseStudy = () => {
+  const { isModalOpen, openModal } = useGlobalContext();
+
   return (
     <div className='casestudy-text'>
       <div className='relative h-screen'>
@@ -10,6 +14,10 @@ const ZaraCaseStudy = () => {
           alt='Zara cover photo'
           className='sticky top-0 w-full h-[472px] object-cover'
         />
+      </div>
+
+      <div>
+        <SideBar />
       </div>
 
       <div className='title-container h-24 flex items-end'>
@@ -57,7 +65,7 @@ const ZaraCaseStudy = () => {
 
         <section className='section-container mt-16'>
           <div className='mb-16'>
-            <h2 className='section-title'>
+            <h2 className='section-title '>
               Design a frictionless online shopping experience
             </h2>
             <p className='medium-text mb-16'>
@@ -110,7 +118,7 @@ const ZaraCaseStudy = () => {
         </section>
 
         <section className='section-container'>
-          <h2 className='section-title-sm'>Approch</h2>
+          <h2 className='section-title'>Approach</h2>
           <p>
             In this case study, I explore the concept of friction in UX and
             structure my design thinking around mitigating negative friction.
@@ -229,11 +237,8 @@ const ZaraCaseStudy = () => {
             <div className='image-text-container-r gap-2 items-center'>
               <div className='md:w-1/3'>
                 <p className='mb-6'>
-                  The lack of visual cues make it clunky to navigate.
-                </p>
-                <p className='mb-6'>
-                  The small text size on the check out page doesn’t provide a
-                  strong call-to-action to the user.
+                  Overall, the lack of visual cues make the website clunky to
+                  navigate.
                 </p>
                 <p className='mb-6'>
                   We need to scroll down to see more product categories but the
@@ -297,13 +302,13 @@ const ZaraCaseStudy = () => {
             <h3 className='sub-section-title '>Persona</h3>
             <p className='mb-6'>Meet Ed</p>
             <div className='grid grid-cols-1 md:grid-cols-2'>
-              <div className='pr-52 md:pb-6 max-w-96'>
+              <div className='pr-52 md:pb-6 max-w-96 '>
                 <img
                   src='src/assets/zaraResource/user-profile.png'
                   alt='User profile'
                 />
               </div>
-              <div className='callout max-w-96 '>
+              <div className='callout max-w-[364px]'>
                 <p className='font-medium mb-2'>Bio</p>
                 <p>
                   Ed is a fashion enthusiast, eager to browse new pieces and
@@ -312,7 +317,7 @@ const ZaraCaseStudy = () => {
                   pieces online and trying them at physical stores.
                 </p>
               </div>
-              <div className='callout max-w-96 '>
+              <div className='callout max-w-[364px]'>
                 <p className='font-medium mb-2'>Goals</p>
                 <ul className='bullet-points'>
                   <li>
@@ -326,7 +331,7 @@ const ZaraCaseStudy = () => {
                   <li>Check their availability in-store.</li>
                 </ul>
               </div>
-              <div className='callout max-w-96 '>
+              <div className='callout max-w-[364px]'>
                 <p className='font-medium mb-2'>Challenges</p>
                 <ul className='bullet-points'>
                   <li>
@@ -483,22 +488,40 @@ const ZaraCaseStudy = () => {
             out the home page, search page, product categories page, as well as
             collections page to demonstrate this.
           </p>
-          <div className='-mx-40'>
+          <div>
             <img
               src='src/assets/zaraResource/zara-wireframe-small.jpg'
               alt='Wire frame'
-              className='h-full'
+              className='cursor-pointer h-full'
+              onClick={() =>
+                openModal("src/assets/zaraResource/zara-wireframe-small.jpg")
+              }
             />
           </div>
-          <div className='sub-section-container mt-20'>
+          <div className='mt-12 text-center'>
+            <p
+              className='underline cursor-pointer'
+              onClick={() =>
+                openModal("src/assets/zaraResource/zara-wireframe-small.jpg")
+              }>
+              Click to enlarge
+            </p>
+          </div>
+          {isModalOpen && <ImageModal />}
+
+          <div className='sub-section-container mt-12'>
             <h3 className='sub-section-title'>The Brand</h3>
             <p className='mb-9'>
               Zara’s brand identity is best described as embodying a
               minimalistic editorial magazine with a strong emphasis on its
               collection pieces.
             </p>
-            <div className='-mx-[242px]'>
-              <img src='src/assets/zaraResource/style.jpg' alt='Zara brand' />
+            <div className='-mx-[282px]'>
+              <img
+                src='src/assets/zaraResource/style.jpg'
+                alt='Zara brand'
+                className='w-full'
+              />
             </div>
           </div>
           <div className='sub-section-container'>
@@ -528,7 +551,7 @@ const ZaraCaseStudy = () => {
                 click in an e-commerce website, my design embeds the navigation
                 panel within the search bar.
               </p>
-              <div className='-mx-40'>
+              <div>
                 <img
                   src='src/assets/zaraResource/navigation-frame.jpg'
                   alt='Navigation panels'
@@ -546,7 +569,7 @@ const ZaraCaseStudy = () => {
                 Horizontal browsing for collections and vertical scroll for
                 collection content
               </p>
-              <div className='-mx-40'>
+              <div>
                 <img
                   src='src/assets/zaraResource/collection-slider.jpg'
                   alt='Collection slider navigation'

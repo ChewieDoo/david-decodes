@@ -12,7 +12,7 @@ Tasks:
 - COMPLETED Route up the links
 - COMPLETED Organize code into React framework (data context, Tailwind components, etc.)
 - Develop Zara page (build out prototype, create skeleton HTML, styling, destructure)
-- Develop Depop page
+- Develop Depop page -> change layout
 - COMPLETED Deploy website
 
 Zara Page:
@@ -32,3 +32,9 @@ Making it responsive:
 - Container borders
 - Font size
 - Behavior / wrapping
+
+Plan
+
+1. DONE Make spacing VERY consistent
+2. DONE Add in click to enlarge
+3. Deploy and see if need to upload image to cloud

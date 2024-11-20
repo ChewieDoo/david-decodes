@@ -36,10 +36,26 @@ const AppProvider = ({ children }) => {
     },
   ];
 
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState("");
+
+  const openModal = (image) => {
+    setSelectedImage(image);
+    setIsModalOpen(true);
+  };
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage("");
+  };
+
   return (
     <AppContext.Provider
       value={{
         caseStudies,
+        selectedImage,
+        openModal,
+        closeModal,
+        isModalOpen,
       }}>
       {children}
     </AppContext.Provider>

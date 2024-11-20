@@ -18,6 +18,8 @@
 }
 html {
   font-size: 18px;
+  overflow-wrap: break-word; /* Allows breaking long words */
+  white-space: normal; /* Allows normal wrapping */
 }
 body {
   @apply font-sans text-base;
@@ -172,13 +174,48 @@ body {
 .big-text {
   @apply text-[32px] md:text-[42px];
 }
+
+.sidebar-item {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  position: relative;
+  transition: padding-left 0.3s ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.sidebar-item:hover {
+  font-size: 16px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.sidebar-item-active {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: normal;
+  font-style: normal;
+  white-space: nowrap;
+}
+.icon-enter {
+  transform: translateY(0);
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.icon-exit {
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 .title-container {
   background-color: white;
   margin-top: -424px;
   margin-left: 36px;
   margin-right: 36px;
   position: relative;
-  z-index: 1000;
+  z-index: 1;
   width: fit-content;
 }
 .tag-container {
@@ -190,12 +227,12 @@ body {
 }
 .main-container {
   @apply mx-4 md:mx-9 justify-center;
-  z-index: 1000;
+  z-index: 1;
 }
 .main-container-background {
   background-color: white;
   position: relative;
-  z-index: 1100;
+  z-index: 2;
 }
 .project-tag {
   @apply text-[16px] md:text-[20px] mb-2 mt-6 md:mb-4 md:mt-12;
@@ -204,17 +241,17 @@ body {
   line-height: normal;
 }
 .section-container {
-  @apply main-container md:mx-[242px];
+  @apply main-container md:px-[242px];
   margin-bottom: 96px;
 }
 .section-container-wide {
-  @apply main-container md:px-[122px];
+  @apply main-container md:px-[96px];
   margin-bottom: 96px;
 }
 .section-title {
-  @apply text-[32px] md:text-[42px];
+  @apply text-[32px] md:text-[36px];
   font-weight: 500;
-  margin-bottom: 42px;
+  margin-bottom: 36px;
 }
 .medium-text {
   @apply md:text-[24px] text-[20px];
@@ -239,10 +276,7 @@ blockquote footer {
 .callout-sm {
   @apply callout md:mx-[112px];
 }
-.section-title-sm {
-  @apply section-title;
-  font-size: 36px;
-}
+
 .section-gray-background {
   background-color: #e9e9ea;
 }
@@ -250,16 +284,16 @@ blockquote footer {
   @apply grid grid-cols-2 md:flex md:flex-row justify-center md:gap-24 items-start;
 }
 .image-text-container-l {
-  @apply md:flex md:flex-row md:-ml-32;
+  @apply md:flex md:flex-row;
 }
 .image-text-container-r {
-  @apply md:flex md:flex-row md:-mr-32;
+  @apply md:flex md:flex-row;
 }
 .image-container-l {
-  @apply md:w-2/3 md:pr-28;
+  @apply md:w-2/3 md:pr-28 max-w-[694px];
 }
 .image-container-r {
-  @apply md:w-2/3 md:pl-28;
+  @apply md:w-2/3 md:pl-28 max-w-[694px];
 }
 .small-title {
   font-size: 18px;

@@ -4,15 +4,15 @@ import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <div className='flex flex-col md:flex-row mt-9 mb-9 ml-9 mr-0.5'>
+    <div className='flex flex-col md:flex-row my-9 ml-9 mr-0.5'>
       <div className='w-full md:w-1/4'>
         <BlahBlah>
           <h1 className='hello-text mb-6 Sk-Modernist'>Hello, I'm David!</h1>
           <p className='intro-text mb-6 Sk-Modernist'>
-            I am a product designer
+            I am a product designer.
           </p>
           <p className='intro-text max-w-48 Sk-Modernist'>
-            I focus on creating ‘frictionless’ and memorable user experience
+            I focus on creating ‘frictionless’ and memorable user experience.
           </p>
         </BlahBlah>
       </div>
