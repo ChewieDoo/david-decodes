@@ -15,13 +15,13 @@ const SideBar = () => {
     setIsNavOpen(!isNavOpen);
   };
   // Function to handle clicks outside of the side-bar
-  const handleClickOutside = (event) => {
-    // Checks to see if 1. sidebar is mounted, 2. if the clicked element is nt art of the sidebar
-    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
-      // 'current' is a property of the mutable reference object
-      setIsNavOpen(false);
-    }
-  };
+  //const handleClickOutside = (event) => {
+  // Checks to see if 1. sidebar is mounted, 2. if the clicked element is nt art of the sidebar
+  //if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+  // 'current' is a property of the mutable reference object
+  //setIsNavOpen(false);
+  //}
+  //};
 
   const handleScroll = () => {
     if (window.scrollY > lastScrollY.current) {
@@ -36,10 +36,10 @@ const SideBar = () => {
 
   //Listener callsforhandleClickOutside whenever the user clicks anywhere outside the document
   useEffect(() => {
-    document.addEventListener("mousedown", handleClickOutside);
+    //document.addEventListener("mousedown", handleClickOutside);
     window.addEventListener("scroll", handleScroll);
     return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
+      //document.removeEventListener("mousedown", handleClickOutside);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -47,9 +47,9 @@ const SideBar = () => {
   return (
     <div className='relative z-10'>
       <div
-        className={`fixed top-6 left-6 z-20 transition-transform duration-300 ${
-          showIcon ? "translate-y-0" : "-translate-y-[200%]"
-        }`}>
+        className={`fixed bottom-6 md:top-6 left-6 z-20 transition-transform duration-300 ${
+          showIcon ? "md:translate-y-0" : "md:-translate-y-[200%]"
+        } `}>
         <SlMenu
           onClick={toggleNav}
           size={30}
@@ -58,7 +58,7 @@ const SideBar = () => {
 
       <div
         ref={sidebarRef} // Attach ref to sidebar
-        className={`fixed top-0 left-0 w-1/5 h-full bg-white shadow-lg transition-transform duration-300 ${
+        className={`fixed top-0 left-0 w-full m:w-1/5 h-screen bg-white shadow-lg transition-transform duration-300 ${
           isNavOpen ? "translate-x-0" : "-translate-x-full"
         }`}>
         <div className='p-6 mt-16'>
@@ -149,7 +149,7 @@ const Socials = () => {
   };
 
   return (
-    <footer className='mt-12 md:mt-56 ml-6'>
+    <footer className='mt-40 md:mt-56 ml-6'>
       <div className='flex flex-row gap-4'>
         <NavIcon
           icon={<FaInstagram size='22' />}
