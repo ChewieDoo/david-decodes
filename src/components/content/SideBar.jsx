@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useGlobalContext } from "./Context";
+import { useGlobalContext } from "../../context/Context";
 import { FaInstagram, FaGithub, FaYoutube } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { SlMenu } from "react-icons/sl";

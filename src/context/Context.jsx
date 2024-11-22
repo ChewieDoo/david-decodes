@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
-import depopMockup from "./assets/depop-mockup.jpg";
-import zaraMockup from "./assets/zara-mockup.jpg";
-import fearlessMockup from "./assets/fearless-mockup.jpg";
+import depopMockup from "../assets/depop-mockup.jpg";
+import zaraMockup from "../assets/zara-mockup.jpg";
+import fearlessMockup from "../assets/fearless-mockup.jpg";
 
 const AppContext = React.createContext();
 

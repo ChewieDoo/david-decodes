@@ -1,7 +1,7 @@
-import { useGlobalContext } from "./Context";
+import { useGlobalContext } from "../context/Context";
 import BlahBlah from "./BlahBlah";
 import { NavLink } from "react-router-dom";
-import SmallFooter from "./SmallFooter";
+import SmallFooter from "./content/SmallFooter";
 
 const HomePage = () => {
   return (

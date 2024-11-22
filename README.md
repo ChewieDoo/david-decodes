@@ -29,6 +29,33 @@ Zara Page:
 
 Daily Plan:
 
-- One of the image is jutting out in Zara Page
-- Issue with loading larger image (i.e. Wireframe onto webpage when deployed, need to consider alternative methd of uploading images)
+- DONE One of the image is jutting out in Zara Page
+- (Priority next time)Issue with loading larger image (i.e. Wireframe onto webpage when deployed, need to consider alternative methd of uploading images)
 - Organize code and remove redundancies
+
+Structure:
+
+src
+main.jsx
+index.css
+App.jsx
+
+assets
+...images and stuff...
+
+context
+
+components
+HomePage.jsx
+Resume.jsx
+Gallery.jsx
+BlahBlah.jsx
+
+      content
+         ImageModal.jsx
+         SideBar.jsx
+         SmallFooter.jsx
+            zara
+               Zara.jsx -> overall structure / layout of the case study
+            depop
+

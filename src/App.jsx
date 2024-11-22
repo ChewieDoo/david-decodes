@@ -1,7 +1,7 @@
-import HomePage from "./HomePage";
-import Gallery from "./Gallery";
-import Resume from "./Resume";
-import ZaraCaseStudy from "./Zara";
+import HomePage from "./components/HomePage";
+import Gallery from "./components/Gallery";
+import Resume from "./components/Resume";
+import ZaraCaseStudy from "./components/content/Zara";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
