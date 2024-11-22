@@ -25,17 +25,10 @@ Zara Page:
 5. COMPLETED Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
 6. Add in image loading function so website loads in time
 7. Destructure - CSS, JSX
-8. Deploy
+8. COMPLETED Deploy
 
-Making it responsive:
+Daily Plan:
 
-- Container borders
-- Font size
-- Behavior / wrapping
-
-Plan
-
-1. Sort out image loading issue an redeploy -> (Figure out why some buttons are not working (i.e. problably because of spacing))
-2. Done: Create responsiveness background for the navigation menu button
-3. Destructure and make the code concise
-4. If have time, do a bit of designing
+- One of the image is jutting out in Zara Page
+- Issue with loading larger image (i.e. Wireframe onto webpage when deployed, need to consider alternative methd of uploading images)
+- Organize code and remove redundancies

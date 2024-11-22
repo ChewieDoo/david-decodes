@@ -551,7 +551,7 @@ const ZaraCaseStudy = () => {
                 />
               </div>
 
-              <div className='image-text-container-l items-center gap-2 mb-9'>
+              <div className='image-text-container-l items-center md:gap-2 mb-9'>
                 <img
                   src={`${zaraImg.collectionNav}`}
                   alt='Sample collections content'

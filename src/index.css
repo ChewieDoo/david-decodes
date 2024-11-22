@@ -315,10 +315,10 @@ blockquote footer {
   @apply md:flex md:flex-row;
 }
 .image-container-l {
-  @apply md:w-2/3 md:pr-28 md:max-w-[694px] max-w-[448px];
+  @apply md:w-2/3 md:pr-28 md:max-w-[694px] max-w-full;
 }
 .image-container-r {
-  @apply md:w-2/3 md:pl-28 md:max-w-[694px] max-w-[448px];
+  @apply md:w-2/3 md:pl-28 md:max-w-[694px] max-w-full;
 }
 .small-title {
   font-size: 18px;
