@@ -11,7 +11,7 @@ Tasks:
 - COMPLETED Figure out responsive CSS (when in mobile or smaller display size, wrap the social icons around)
 - COMPLETED Route up the links
 - COMPLETED Organize code into React framework (data context, Tailwind components, etc.)
-- Develop Zara page (build out prototype, create skeleton HTML, styling, destructure)
+- COMPLETED Develop Zara page (build out prototype, create skeleton HTML, styling, destructure)
 - Develop Depop page -> change layout
 - COMPLETED Deploy website
 
@@ -22,7 +22,7 @@ Zara Page:
 3. COMPLETED Style it -> create common Tailwind components that can be applied to other sections
 4. COMPLETE Make case study responsive
    _NOTE_ When in large display, things a bit funky... the content is not centered
-5. Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
+5. COMPLETED Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
 6. Add in image loading function so website loads in time
 7. Destructure - CSS, JSX
 8. Deploy
@@ -35,6 +35,7 @@ Making it responsive:
 
 Plan
 
-1. DONE Make spacing VERY consistent
-2. DONE Add in click to enlarge
-3. Deploy and see if need to upload image to cloud
+1. Sort out image loading issue an redeploy -> (Figure out why some buttons are not working (i.e. problably because of spacing))
+2. Done: Create responsiveness background for the navigation menu button
+3. Destructure and make the code concise
+4. If have time, do a bit of designing

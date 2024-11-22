@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { useGlobalContext } from "./Context";
 import { FaInstagram, FaGithub, FaYoutube } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { SlMenu } from "react-icons/sl";
@@ -9,11 +10,13 @@ const SideBar = () => {
   const [showIcon, setShowIcon] = useState(true);
   const sidebarRef = useRef(null); // Creating reference for sidebar
   const lastScrollY = useRef(0); // Keep track of the last scroll position
+  const { caseStudies } = useGlobalContext();
 
   // Function to toggle on and off the navbar
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+
   // Function to handle clicks outside of the side-bar
   //const handleClickOutside = (event) => {
   // Checks to see if 1. sidebar is mounted, 2. if the clicked element is nt art of the sidebar
@@ -47,21 +50,31 @@ const SideBar = () => {
   return (
     <div className='relative z-10'>
       <div
-        className={`fixed bottom-6 md:top-6 left-6 z-20 transition-transform duration-300 ${
-          showIcon ? "md:translate-y-0" : "md:-translate-y-[200%]"
+        className={`fixed ${
+          window.innerWidth < 768 ? "bottom-6" : "top-6"
+        } left-4 z-10 transition-transform duration-300 ${
+          showIcon
+            ? window.innerWidth < 768
+              ? "translate-x-0"
+              : "translate-y-0"
+            : window.innerWidth < 768
+            ? "-translate-x-[200%]"
+            : "-translate-y-[200%]"
         } `}>
-        <SlMenu
-          onClick={toggleNav}
-          size={30}
-          className={`cursor-pointer`}></SlMenu>
+        <div className='relative flex items-center justify-center w-12 h-12 bg-white rounded-xl shadow-md md:bg-transparent md:shadow-none'>
+          <SlMenu
+            onClick={toggleNav}
+            size={30}
+            className={`cursor-pointer`}></SlMenu>
+        </div>
       </div>
 
       <div
         ref={sidebarRef} // Attach ref to sidebar
-        className={`fixed top-0 left-0 w-full m:w-1/5 h-screen bg-white shadow-lg transition-transform duration-300 ${
+        className={`fixed top-0 left-0 w-full md:w-1/5 h-screen bg-white shadow-lg transition-transform duration-300 ${
           isNavOpen ? "translate-x-0" : "-translate-x-full"
         }`}>
-        <div className='p-6 mt-16'>
+        <div className='ml-2 p-6 mt-16'>
           <ul>
             <li className='mb-9'>
               <NavLink to='/' className='nav-item-active'>
@@ -70,10 +83,11 @@ const SideBar = () => {
               <ul className='mt-2 pl-9'>
                 <li className='mb-2'>
                   <NavLink
-                    to='/'
+                    to={caseStudies[0].link}
                     className={({ isActive }) =>
                       isActive ? "sidebar-item-active" : "sidebar-item"
-                    }>
+                    }
+                    target='_blank'>
                     Depop - Rent a Depoop
                   </NavLink>
                 </li>
@@ -83,17 +97,19 @@ const SideBar = () => {
                     to='/frictionless'
                     className={({ isActive }) =>
                       isActive ? "sidebar-item-active" : "sidebar-item"
-                    }>
+                    }
+                    target='_blank'>
                     Frictionless Fashion
                   </NavLink>
                 </li>
 
                 <li className='mb-2'>
                   <NavLink
-                    to='/'
+                    to={caseStudies[2].link}
                     className={({ isActive }) =>
                       isActive ? "sidebar-item-active" : "sidebar-item"
-                    }>
+                    }
+                    target='_blank'>
                     KPop - Web Development
                   </NavLink>
                 </li>
@@ -102,7 +118,7 @@ const SideBar = () => {
 
             <li className='mb-9'>
               <NavLink
-                to='/'
+                to='/resume'
                 className={({ isActive }) =>
                   isActive ? "nav-item-active" : "nav-item "
                 }>
@@ -111,7 +127,7 @@ const SideBar = () => {
             </li>
             <li className='mb-9'>
               <NavLink
-                to='/'
+                to='/gallery'
                 className={({ isActive }) =>
                   isActive ? "nav-item-active" : "nav-item "
                 }>
@@ -153,15 +169,20 @@ const Socials = () => {
       <div className='flex flex-row gap-4'>
         <NavIcon
           icon={<FaInstagram size='22' />}
-          href='https://www.instagram.com/jungkook_bighitentertainment/'></NavIcon>
+          href='https://www.instagram.com/jungkook_bighitentertainment/'
+          target='_blank'></NavIcon>
         <NavIcon
           icon={<FaGithub size='22' />}
-          href='https://github.com/ChewieDoo'></NavIcon>
+          href='https://github.com/ChewieDoo'
+          target='_blank'></NavIcon>
         <NavIcon
           icon={<FaYoutube size='22' />}
-          href='https://www.youtube.com/@Zinggzouu'></NavIcon>
+          href='https://www.youtube.com/@Zinggzouu'
+          target='_blank'></NavIcon>
         <NavIcon
-          icon={<MdEmail size='22' onClick={handleEmailClick} />}></NavIcon>
+          icon={
+            <MdEmail size='22' onClick={handleEmailClick} target='_blank' />
+          }></NavIcon>
       </div>
     </footer>
   );

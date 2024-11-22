@@ -1,4 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import depopMockup from "./assets/depop-mockup.jpg";
+import zaraMockup from "./assets/zara-mockup.jpg";
+import fearlessMockup from "./assets/fearless-mockup.jpg";
 
 const AppContext = React.createContext();
 
@@ -7,7 +10,7 @@ const AppProvider = ({ children }) => {
     {
       id: 0,
       title: "Rent a Depop",
-      coverPhoto: "src/assets/depop-mockup.jpg",
+      coverPhoto: depopMockup,
       themeColor: "tag-box-1",
       tags: ["E-commerce", "Added-feature", "Sustainability"],
       name: "Depop",
@@ -17,7 +20,7 @@ const AppProvider = ({ children }) => {
     {
       id: 1,
       title: "Frictionless Fashion",
-      coverPhoto: "src/assets/zara-mockup.jpg",
+      coverPhoto: zaraMockup,
       themeColor: "tag-box-2",
       tags: ["Fashion", "Responsive Web Design", "Navigation"],
       name: "Zara",
@@ -27,7 +30,7 @@ const AppProvider = ({ children }) => {
     {
       id: 2,
       title: "Fearless",
-      coverPhoto: "src/assets/fearless-mockup.jpg",
+      coverPhoto: fearlessMockup,
       themeColor: "tag-box-3",
       tags: ["Web Development", "JavaScript", "React", "Tailwind CSS"],
       name: "KPOP",

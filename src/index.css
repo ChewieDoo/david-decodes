@@ -163,7 +163,32 @@ body {
 /* Animations */
 @layer components {
   .socials-icon {
-    @apply relative flex items-center justify-center w-8 h-8 bg-icon-gray bg-opacity-75 text-white hover:bg-opacity-100 rounded-3xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
+    @apply relative flex items-center justify-center w-8 h-8
+     bg-icon-gray bg-opacity-45 text-white hover:bg-opacity-75 
+     rounded-3xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
+  }
+}
+
+.reactLogo {
+  color: #61dafb;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.reactLogo:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes reactLogo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .reactLogo {
+    animation: reactLogo-spin infinite 20s linear;
   }
 }
 
@@ -290,10 +315,10 @@ blockquote footer {
   @apply md:flex md:flex-row;
 }
 .image-container-l {
-  @apply md:w-2/3 md:pr-28 max-w-[694px];
+  @apply md:w-2/3 md:pr-28 md:max-w-[694px] max-w-[448px];
 }
 .image-container-r {
-  @apply md:w-2/3 md:pl-28 max-w-[694px];
+  @apply md:w-2/3 md:pl-28 md:max-w-[694px] max-w-[448px];
 }
 .small-title {
   font-size: 18px;

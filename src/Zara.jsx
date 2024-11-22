@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "./Context";
+import { useImages } from "./ImageContext";
 import ImageModal from "./ImageModal";
 import SideBar from "./SideBar";
+import SmallFooter from "./SmallFooter";
 
 const ZaraCaseStudy = () => {
   const { isModalOpen, openModal } = useGlobalContext();
+  const { zaraImg } = useImages();
 
   return (
     <div className='casestudy-text'>
       <div className='relative h-screen'>
         <img
-          src='src/assets/zaraResource/zara-cover-photo-smaller.jpg'
+          src={`${zaraImg.coverPhoto}`}
           alt='Zara cover photo'
           className='sticky top-0 w-full h-[472px] object-cover'
         />
@@ -23,7 +26,7 @@ const ZaraCaseStudy = () => {
       <div className='title-container h-24 flex items-end'>
         <div className='h-full'>
           <img
-            src='src/assets/zaraResource/zara-logo.jpg'
+            src={`${zaraImg.logo}`}
             alt='Zara logo'
             className='h-full object-contain'></img>
         </div>
@@ -192,10 +195,7 @@ const ZaraCaseStudy = () => {
           </p>
 
           <div>
-            <img
-              src='src/assets/zaraResource/goals.jpg'
-              alt='User search goals'
-            />
+            <img src={`${zaraImg.goals}`} alt='User search goals' />
           </div>
 
           <div className='sub-section-container'>
@@ -203,10 +203,7 @@ const ZaraCaseStudy = () => {
             <p className='mb-9'>
               Here is what I found browsing through Zara.com.
             </p>
-            <img
-              src='src/assets/zaraResource/zara-homepage.jpg'
-              alt='Zara home page'
-            />
+            <img src={`${zaraImg.webHomePage}`} alt='Zara home page' />
             <p className='my-9'>
               From the home page, I am not sure where to go to look for product
               categories. It is hard to find the navigation menu. The text size
@@ -215,10 +212,7 @@ const ZaraCaseStudy = () => {
 
             <div className='image-text-container-l items-center gap-2 mb-6 '>
               <div className='image-container-l'>
-                <img
-                  src='src/assets/zaraResource/original-product-page.jpg'
-                  alt='Original product page'
-                />
+                <img src={`${zaraImg.webProdPg}`} alt='Original product page' />
               </div>
 
               <div className='mt-6 md:w-1/3 md:mt-0'>
@@ -250,10 +244,7 @@ const ZaraCaseStudy = () => {
                 </p>
               </div>
               <div className='image-container-r md:-mt-0'>
-                <img
-                  src='src/assets/zaraResource/origina-call-to-action.jpg'
-                  alt='Original call to action'
-                />
+                <img src={`${zaraImg.webCTA}`} alt='Original call to action' />
               </div>
             </div>
           </div>
@@ -268,10 +259,7 @@ const ZaraCaseStudy = () => {
               smaller-scale e-commerce shops, and well-established luxury brands
               to explore design choices and generate inspiration for my designs.
             </p>
-            <img
-              src='src/assets/zaraResource/competitor-analysis.jpg'
-              alt='Competitor analysis'
-            />
+            <img src={`${zaraImg.compAnalysis}`} alt='Competitor analysis' />
             <p className='mt-8'>
               In summary, these websites use a diverse range of design choices
               (combining navigation features, accent colors, UI layouts, etc.)
@@ -289,10 +277,7 @@ const ZaraCaseStudy = () => {
               recruited my participants from my personal network and design
               communities.
             </p>
-            <img
-              src='src/assets/zaraResource/user-research-result.jpg'
-              alt='User research result'
-            />
+            <img src={`${zaraImg.userResearch}`} alt='User research result' />
           </div>
         </section>
 
@@ -303,10 +288,7 @@ const ZaraCaseStudy = () => {
             <p className='mb-6'>Meet Ed</p>
             <div className='grid grid-cols-1 md:grid-cols-2'>
               <div className='pr-52 md:pb-6 max-w-96 '>
-                <img
-                  src='src/assets/zaraResource/user-profile.png'
-                  alt='User profile'
-                />
+                <img src={`${zaraImg.userProfile}`} alt='User profile' />
               </div>
               <div className='callout max-w-[364px]'>
                 <p className='font-medium mb-2'>Bio</p>
@@ -415,7 +397,7 @@ const ZaraCaseStudy = () => {
             <div>
               <p className='font-medium mb-4'>OLD SITE MAP</p>
               <img
-                src='src/assets/zaraResource/old-site-map.jpg'
+                src={`${zaraImg.oldSiteMap}`}
                 alt='Original site map'
                 className='mb-8'
               />
@@ -430,10 +412,7 @@ const ZaraCaseStudy = () => {
             </p>
             <div>
               <p className='font-medium mb-4'>NEW SITE MAP</p>
-              <img
-                src='src/assets/zaraResource/new-site-map.jpg'
-                alt='New site map'
-              />
+              <img src={`${zaraImg.newSiteMap}`} alt='New site map' />
             </div>
           </div>
           <div className='sub-section-container'>
@@ -457,7 +436,7 @@ const ZaraCaseStudy = () => {
             <div>
               <p className='font-medium mb-4'>OLD USER FLOW</p>
               <img
-                src='src/assets/zaraResource/old-user-flow.jpg'
+                src={`${zaraImg.oldUserFlow}`}
                 alt='Original user flow'
                 className='mb-8'
               />
@@ -473,7 +452,7 @@ const ZaraCaseStudy = () => {
             <div>
               <p className='font-medium mb-4'>NEW USER FLOW</p>
               <img
-                src='src/assets/zaraResource/new-user-flow.jpg'
+                src={`${zaraImg.newUserFlow}`}
                 alt='New user flow'
                 className='mb-8'
               />
@@ -490,20 +469,16 @@ const ZaraCaseStudy = () => {
           </p>
           <div>
             <img
-              src='src/assets/zaraResource/zara-wireframe-small.jpg'
+              src={`${zaraImg.wireFrame}`}
               alt='Wire frame'
               className='cursor-pointer h-full'
-              onClick={() =>
-                openModal("src/assets/zaraResource/zara-wireframe-small.jpg")
-              }
+              onClick={() => openModal(zaraImg.wireFrame)}
             />
           </div>
           <div className='mt-12 text-center'>
             <p
               className='underline cursor-pointer'
-              onClick={() =>
-                openModal("src/assets/zaraResource/zara-wireframe-small.jpg")
-              }>
+              onClick={() => openModal(zaraImg.wireFrame)}>
               Click to enlarge
             </p>
           </div>
@@ -516,9 +491,9 @@ const ZaraCaseStudy = () => {
               minimalistic editorial magazine with a strong emphasis on its
               collection pieces.
             </p>
-            <div className='-mx-[282px]'>
+            <div className='-mx-[18px] md:-mx-[282px]'>
               <img
-                src='src/assets/zaraResource/style.jpg'
+                src={`${zaraImg.brand}`}
                 alt='Zara brand'
                 className='w-full'
               />
@@ -530,7 +505,7 @@ const ZaraCaseStudy = () => {
               With this in mind, I built a UI Kit to ensure design consistency
               going forward.
             </p>
-            <img src='src/assets/zaraResource/ui-kit.jpg' alt='UI Kit' />
+            <img src={`${zaraImg.uiKit}`} alt='UI Kit' />
           </div>
           <div className='sub-section-container'>
             <h3 className='sub-section-title'>Visual Design</h3>
@@ -553,7 +528,7 @@ const ZaraCaseStudy = () => {
               </p>
               <div>
                 <img
-                  src='src/assets/zaraResource/navigation-frame.jpg'
+                  src={`${zaraImg.nav}`}
                   alt='Navigation panels'
                   className='mb-9'
                 />
@@ -571,14 +546,14 @@ const ZaraCaseStudy = () => {
               </p>
               <div>
                 <img
-                  src='src/assets/zaraResource/collection-slider.jpg'
+                  src={`${zaraImg.collectionSlider}`}
                   alt='Collection slider navigation'
                 />
               </div>
 
               <div className='image-text-container-l items-center gap-2 mb-9'>
                 <img
-                  src='src/assets/zaraResource/navigation-image-2.jpg'
+                  src={`${zaraImg.collectionNav}`}
                   alt='Sample collections content'
                   className='image-container-l'
                 />
@@ -615,7 +590,7 @@ const ZaraCaseStudy = () => {
                 </div>
                 <div className='image-container-r'>
                   <img
-                    src='src/assets/zaraResource/store-availability.jpg'
+                    src={`${zaraImg.prodAvaiFilter}`}
                     alt='Store availability filter'
                   />
                 </div>
@@ -627,7 +602,7 @@ const ZaraCaseStudy = () => {
             <div className='image-text-container-l items-center gap-2 mb-9'>
               <div className='image-container-l'>
                 <img
-                  src='src/assets/zaraResource/filter-stack.jpg'
+                  src={`${zaraImg.filter}`}
                   alt='Product filter'
                   className='mb-6'
                 />
@@ -661,19 +636,13 @@ const ZaraCaseStudy = () => {
                   </p>
                 </div>
                 <div className='image-container-r'>
-                  <img
-                    src='src/assets/zaraResource/thumb-nail-stack.jpg'
-                    alt='Loading thumb nail'
-                  />
+                  <img src={`${zaraImg.thumbnail}`} alt='Loading thumb nail' />
                 </div>
               </div>
 
               <div className='image-text-container-l items-center mb-9'>
                 <div className='image-container-l'>
-                  <img
-                    src='src/assets/zaraResource/call-to-action.jpg'
-                    alt='Call to action check out'
-                  />
+                  <img src={`${zaraImg.cta}`} alt='Call to action check out' />
                 </div>
 
                 <div className='md:w-1/3 mt-6 md:-mt-48'>
@@ -761,6 +730,9 @@ const ZaraCaseStudy = () => {
               more case studies coming up!
             </p>
           </div>
+        </section>
+        <section className='mt-28 mb-36'>
+          <SmallFooter />
         </section>
       </div>
     </div>

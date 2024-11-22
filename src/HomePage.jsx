@@ -1,6 +1,7 @@
 import { useGlobalContext } from "./Context";
 import BlahBlah from "./BlahBlah";
 import { NavLink } from "react-router-dom";
+import SmallFooter from "./SmallFooter";
 
 const HomePage = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage = () => {
           <CaseStudyCard id='1' />
           <CaseStudyCard id='2' />
         </div>
+        <SmallFooter />
       </div>
     </div>
   );
@@ -48,7 +50,7 @@ const CaseStudyCard = ({ id }) => {
         <p className='casestudy-p-text mb-6 Sk-Modernist'>
           {caseStudies[id].text}
         </p>
-        <NavLink to={`${caseStudies[id].link}`}>
+        <NavLink to={`${caseStudies[id].link}`} target='_blank'>
           <button className='button-text button-box Sk-Modernist-Bold'>
             VIEW CASE STUDY
           </button>
