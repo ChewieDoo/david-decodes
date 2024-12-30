@@ -243,8 +243,23 @@ body {
   z-index: 1;
   width: fit-content;
 }
+
+.title-container-clear {
+  margin-top: -424px;
+  margin-left: 36px;
+  margin-right: 36px;
+  position: relative;
+  z-index: 1;
+  width: fit-content;
+}
+
 .tag-container {
   @apply grid grid-cols-2 px-8 md:flex md:flex-row md:px-24 md:gap-48 
+  justify-center items-start;
+}
+
+.tag-container-sm {
+  @apply grid grid-cols-2 px-8 md:flex md:flex-row md:px-24 md:gap-32 
   justify-center items-start;
 }
 .tag-container p {
@@ -265,6 +280,12 @@ body {
   font-weight: 500;
   line-height: normal;
 }
+.project-tag-sm {
+  @apply text-[16px] md:text-[18px] mb-2 mt-[54px] md:mb-4 md:mt-12;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 .section-container {
   @apply main-container md:px-[242px];
   margin-bottom: 96px;
@@ -278,9 +299,15 @@ body {
   font-weight: 500;
   margin-bottom: 36px;
 }
+
 .medium-text {
   @apply md:text-[24px] text-[20px];
 }
+
+.medium-text-lg {
+  @apply md:text-[28px] text-[24px];
+}
+
 blockquote {
   @apply md:text-[18px] md:ml-32 md:mr-32 text-[14px] ml-8 mr-8 mb-16;
   font-style: italic;
@@ -349,4 +376,20 @@ ul.bullet-points {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.title-red {
+  @apply text-[#E72000] md:text-[24px] Sk-Modernist-Bold;
+}
+.subtitle-bold {
+  @apply Sk-Modernist-Bold text-[28px];
+}
+.callout-round {
+  border-radius: 20px;
+  background: #f2f2f7;
+}
+.callout-round-transparent {
+  border-radius: 20px;
+  border: 1.7px solid #000;
+  @apply py-[42px] px-[22px] max-w-[275px] text-center;
 }

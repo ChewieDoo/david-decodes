@@ -1,4 +1,6 @@
 import React, { createContext, useContext } from "react";
+
+// Zara Imgs
 import ctaImg from "../assets/zaraResource/call-to-action.jpg";
 import collectionSliderImg from "../assets/zaraResource/collection-slider.jpg";
 import compAnalysisImg from "../assets/zaraResource/competitor-analysis.jpg";
@@ -22,6 +24,20 @@ import userResearchImg from "../assets/zaraResource/user-research-result.jpg";
 import webHomePageImg from "../assets/zaraResource/zara-homepage.jpg";
 import logoImg from "../assets/zaraResource/zara-logo.jpg";
 import wireFrameImg from "../assets/zaraResource/zara-wireframe-small.jpg";
+
+// Depop Imgs
+import depopBanner from "../assets/depopResource/depop-banner-lg.jpg";
+import depopLogo from "../assets/depopResource/depop-rental-logo.png";
+import depopBuyPage from "../assets/depopResource/original-buy-page.jpg";
+import depopSummaryFlow from "../assets/depopResource/depop-summary-flow.gif";
+import depopArrows from "../assets/depopResource/depop-arrows.png";
+import depopUserJourney from "../assets/depopResource/depop-user-journey.jpg";
+import depopProdTag from "../assets/depopResource/product-tag.jpg";
+import depopProdTabs from "../assets/depopResource/buy-rent-tab.jpg";
+import depopChat from "../assets/depopResource/chat-rapport.jpg";
+import depopPolicy from "../assets/depopResource/rental-policy.jpg";
+import depopUI from "../assets/depopResource/ui-kit.jpg";
+import depopDesignImpact from "../assets/depopResource/depop-impact.jpg";
 
 const ImageContext = createContext();
 
@@ -52,8 +68,23 @@ const ImageProvider = ({ children }) => {
     cta: ctaImg,
   };
 
+  const depopImg = {
+    coverPhoto: depopBanner,
+    logo: depopLogo,
+    buyPage: depopBuyPage,
+    finalDesign: depopSummaryFlow,
+    arrows: depopArrows,
+    userJourney: depopUserJourney,
+    productTag: depopProdTag,
+    buyRentTab: depopProdTabs,
+    chat: depopChat,
+    policy: depopPolicy,
+    uiKit: depopUI,
+    impactMeasurement: depopDesignImpact,
+  };
+
   return (
-    <ImageContext.Provider value={{ zaraImg }}>
+    <ImageContext.Provider value={{ zaraImg, depopImg }}>
       {children}
     </ImageContext.Provider>
   );

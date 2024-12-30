@@ -15,7 +15,7 @@ const AppProvider = ({ children }) => {
       tags: ["E-commerce", "Added-feature", "Sustainability"],
       name: "Depop",
       text: "How to introduce and integrate a cloth-rental feature onto a popular e-commerce and online thrifting mobile app?",
-      link: "https://juniper-room-602.notion.site/Rent-a-Depop-48ae1bd3a910401bb4e2f37ca0f4df20?pvs=74",
+      link: "/rentADepop",
     },
     {
       id: 1,

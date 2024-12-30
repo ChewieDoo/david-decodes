@@ -24,38 +24,11 @@ Zara Page:
    _NOTE_ When in large display, things a bit funky... the content is not centered
 5. COMPLETED Add fancy stuff (back-button, navigation, catalog on right hand side <-consider how to destucture this)
 6. Add in image loading function so website loads in time
-7. Destructure - CSS, JSX
+7. COMPLETED Destructure - CSS, JSX
 8. COMPLETED Deploy
 
 Daily Plan:
 
 - DONE One of the image is jutting out in Zara Page
 - (Priority next time)Issue with loading larger image (i.e. Wireframe onto webpage when deployed, need to consider alternative methd of uploading images)
-- Organize code and remove redundancies
-
-Structure:
-
-src
-main.jsx
-index.css
-App.jsx
-
-assets
-...images and stuff...
-
-context
-
-components
-HomePage.jsx
-Resume.jsx
-Gallery.jsx
-BlahBlah.jsx
-
-      content
-         ImageModal.jsx
-         SideBar.jsx
-         SmallFooter.jsx
-            zara
-               Zara.jsx -> overall structure / layout of the case study
-            depop
-
+- DONE Organize code and remove redundancies

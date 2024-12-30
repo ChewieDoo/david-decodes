@@ -13,7 +13,7 @@ const ZaraTags = () => {
       </div>
       <div className='w-full'>
         <h3 className='project-tag '>TIMELINE</h3>
-        <p>Aug 30 - Oct 28</p>
+        <p>Aug - Oct, 2024 </p>
         <p>4 weeks</p>
       </div>
 
