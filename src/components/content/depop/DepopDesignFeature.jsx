@@ -20,7 +20,7 @@ const DepopDesignFeature = () => {
             stand out.
           </p>
         </div>
-        <div className='md:w-1/2 md:flex md:justify-end'>
+        <div className='md:w-1/2 flex md:justify-end justify-center'>
           <img
             className='max-w-[327px]'
             src={`${depopImg.filterTags}`}
@@ -30,7 +30,7 @@ const DepopDesignFeature = () => {
       </div>
 
       <div className='md:flex md:flex-row mb-[42px]'>
-        <div className='md:w-1/2'>
+        <div className='md:w-1/2 flex justify-center'>
           <img
             className='max-w-[327px] md:mb-0 mb-6'
             src={`${depopImg.rentalTabs}`}
@@ -61,7 +61,7 @@ const DepopDesignFeature = () => {
             by previous customers.
           </p>
         </div>
-        <div className='md:w-1/2 md:flex md:justify-end'>
+        <div className='md:w-1/2 flex md:justify-end justify-center'>
           <img
             className='max-w-[327px]'
             src={`${depopImg.rapport}`}
@@ -71,7 +71,7 @@ const DepopDesignFeature = () => {
       </div>
 
       <div className='md:flex md:flex-row'>
-        <div className='md:w-1/2'>
+        <div className='md:w-1/2 flex justify-center'>
           <img
             className='max-w-[327px] md:mb-0 mb-6'
             src={`${depopImg.checkout}`}

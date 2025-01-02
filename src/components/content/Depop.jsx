@@ -32,8 +32,8 @@ const DepopCaseStudy = () => {
             className='h-full object-contain'
           />
         </div>
-        <div className='flex items-end ml-2'>
-          <h1 className='text-[36px]'>Rent a Depop</h1>
+        <div className='flex md:items-end ml-2'>
+          <h1 className='md:text-[36px] text-[32px]'>Rent a Depop</h1>
         </div>
       </div>
 

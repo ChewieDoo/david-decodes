@@ -55,13 +55,15 @@ const DepopSummary = () => {
         </div>
 
         <div className='md:flex md:flex-row'>
-          <div className='pr-[124px] md:mb-[0px] mb-[32px]'>
+          <div className='md:pr-[124px] md:mb-[0px] mb-[32px]'>
             <p className='text-[16px] mb-[24px]'>Current Depop product page:</p>
-            <img
-              className='max-w-[220px]'
-              src={`${depopImg.buyPage}`}
-              alt='Depop original buy page'
-            />
+            <div className='flex justify-center'>
+              <img
+                className='max-w-[220px]'
+                src={`${depopImg.buyPage}`}
+                alt='Depop original buy page'
+              />
+            </div>
           </div>
           <div className='md:w-2/3'>
             <div className='md:flex md:flex-row '>
@@ -73,7 +75,7 @@ const DepopSummary = () => {
                   <li>Chat with shop owner</li>
                 </ul>
               </div>
-              <div className='md:w-2/3 md:flex md:justify-end'>
+              <div className='md:w-2/3 flex md:justify-end justify-center'>
                 <img
                   className='max-w-[327px]'
                   src={`${depopImg.finalDesign}`}
