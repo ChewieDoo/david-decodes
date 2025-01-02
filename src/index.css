@@ -295,7 +295,7 @@ body {
   margin-bottom: 96px;
 }
 .section-title {
-  @apply text-[32px] md:text-[36px];
+  @apply text-[36px];
   font-weight: 500;
   margin-bottom: 36px;
 }
@@ -379,7 +379,7 @@ ul.bullet-points {
 }
 
 .title-red {
-  @apply text-[#E72000] md:text-[24px] Sk-Modernist-Bold;
+  @apply text-[#E72000] text-[24px] Sk-Modernist-Bold;
 }
 .subtitle-bold {
   @apply Sk-Modernist-Bold text-[28px];
@@ -391,5 +391,5 @@ ul.bullet-points {
 .callout-round-transparent {
   border-radius: 20px;
   border: 1.7px solid #000;
-  @apply py-[42px] px-[22px] max-w-[275px] text-center;
+  @apply py-[42px] px-[22px] md:max-w-[275px] text-center;
 }

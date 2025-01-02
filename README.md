@@ -12,8 +12,15 @@ Tasks:
 - COMPLETED Route up the links
 - COMPLETED Organize code into React framework (data context, Tailwind components, etc.)
 - COMPLETED Develop Zara page (build out prototype, create skeleton HTML, styling, destructure)
-- Develop Depop page -> change layout
+- COMPLETED Develop Depop page -> change layout
 - COMPLETED Deploy website
+- Compress / resize image to decrease loading time
+
+Depop Page:
+
+- COMPLETED Change gif files to only show mock up frames
+- Make the webpage responsive
+- Deploy
 
 Zara Page:
 

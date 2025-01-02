@@ -76,7 +76,7 @@ const DepopResearch = () => {
         </h3>
 
         <div>
-          <div className='flex gap-[36px] mb-[24px]'>
+          <div className='grid md:flex gap-[36px] mb-[24px]'>
             <div className='callout-round-transparent flex-1'>
               <p className='text-[16px]'>
                 A{" "}
@@ -106,15 +106,22 @@ const DepopResearch = () => {
               </p>
             </div>
           </div>
-          <div className='flex justify-center mb-[12px]'>
+          <div className='md:flex justify-center mb-[12px] hidden'>
             <img
-              className='max-w-[640px]'
+              className='max-w-[640px] '
               src={`${depopImg.arrows}`}
               alt='Arrows'
             />
           </div>
+          <div className='md:hidden flex justify-center mb-[12px]'>
+            <img
+              className='max-w-[640px] '
+              src={`${depopImg.downArrow}`}
+              alt='Down Arrow'
+            />
+          </div>
 
-          <div className='callout-round px-[156px] py-[42px]'>
+          <div className='callout-round md:px-[156px] px-[22px] py-[42px]'>
             <div>
               <div className='flex justify-center'>
                 <img

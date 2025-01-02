@@ -54,24 +54,31 @@ const DepopSummary = () => {
           </p>
         </div>
 
-        <div className='flex flex-row'>
-          <div className='w-1/3 pr-[124px]'>
+        <div className='md:flex md:flex-row'>
+          <div className='pr-[124px] md:mb-[0px] mb-[32px]'>
             <p className='text-[16px] mb-[24px]'>Current Depop product page:</p>
-            <img src={`${depopImg.buyPage}`} alt='Depop original buy page' />
+            <img
+              className='max-w-[220px]'
+              src={`${depopImg.buyPage}`}
+              alt='Depop original buy page'
+            />
           </div>
-          <div className='w-2/3'>
-            <div className='flex flex-row'>
-              <div className='w-1/3'>
-                <p className='text-[16px]'>New rental feature:</p>
-                <ul className='text-[16px] bullet-points'>
+          <div className='md:w-2/3'>
+            <div className='md:flex md:flex-row '>
+              <div className='md:w-1/3'>
+                <p className='text-[16px] mb-5'>New rental feature:</p>
+                <ul className='text-[16px] bullet-points md:mb-0 mb-6'>
                   <li>Date selection</li>
                   <li>Guidance and policies</li>
                   <li>Chat with shop owner</li>
                 </ul>
               </div>
-
-              <div className='w-2/3'>
-                <img src={`${depopImg.finalDesign}`} alt='Depop Final Design' />
+              <div className='md:w-2/3 md:flex md:justify-end'>
+                <img
+                  className='max-w-[327px]'
+                  src={`${depopImg.finalDesign}`}
+                  alt='Depop Final Design'
+                />
               </div>
             </div>
           </div>

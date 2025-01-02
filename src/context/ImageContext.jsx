@@ -29,7 +29,11 @@ import wireFrameImg from "../assets/zaraResource/zara-wireframe-small.jpg";
 import depopBanner from "../assets/depopResource/depop-banner-lg.jpg";
 import depopLogo from "../assets/depopResource/depop-rental-logo.png";
 import depopBuyPage from "../assets/depopResource/original-buy-page.jpg";
-import depopSummaryFlow from "../assets/depopResource/depop-summary-flow.gif";
+import depopSummaryFlow from "../assets/depopResource/depop-summary-flow-short.gif";
+import depopTags from "../assets/depopResource/depop-prod-tags.gif";
+import depopRentalTab from "../assets/depopResource/depop-rental-tab.gif";
+import depopRapport from "../assets/depopResource/depop-rapport.gif";
+import depopCheckout from "../assets/depopResource/depop-checkout.gif";
 import depopArrows from "../assets/depopResource/depop-arrows.png";
 import depopUserJourney from "../assets/depopResource/depop-user-journey.jpg";
 import depopProdTag from "../assets/depopResource/product-tag.jpg";
@@ -38,6 +42,7 @@ import depopChat from "../assets/depopResource/chat-rapport.jpg";
 import depopPolicy from "../assets/depopResource/rental-policy.jpg";
 import depopUI from "../assets/depopResource/ui-kit.jpg";
 import depopDesignImpact from "../assets/depopResource/depop-impact.jpg";
+import downArrow from "../assets/depopResource/down-arrow.png";
 
 const ImageContext = createContext();
 
@@ -73,6 +78,10 @@ const ImageProvider = ({ children }) => {
     logo: depopLogo,
     buyPage: depopBuyPage,
     finalDesign: depopSummaryFlow,
+    filterTags: depopTags,
+    rentalTabs: depopRentalTab,
+    rapport: depopRapport,
+    checkout: depopCheckout,
     arrows: depopArrows,
     userJourney: depopUserJourney,
     productTag: depopProdTag,
@@ -81,6 +90,7 @@ const ImageProvider = ({ children }) => {
     policy: depopPolicy,
     uiKit: depopUI,
     impactMeasurement: depopDesignImpact,
+    downArrow: downArrow,
   };
 
   return (
