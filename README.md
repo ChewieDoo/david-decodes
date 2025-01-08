@@ -19,8 +19,8 @@ Tasks:
 Depop Page:
 
 - COMPLETED Change gif files to only show mock up frames
-- Make the webpage responsive
-- Deploy
+- COMPLETED Make the webpage responsive
+- COMPLETED Deploy
 
 Zara Page:
 

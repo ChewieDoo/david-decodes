@@ -201,6 +201,7 @@ body {
 }
 
 .sidebar-item {
+  @apply Sk-Modernist;
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
@@ -211,11 +212,13 @@ body {
   white-space: nowrap;
 }
 .sidebar-item:hover {
+  @apply Sk-Modernist-Bold;
   font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
 }
 .sidebar-item-active {
+  @apply Sk-Modernist-Bold;
   font-size: 16px;
   font-weight: 500;
   line-height: normal;

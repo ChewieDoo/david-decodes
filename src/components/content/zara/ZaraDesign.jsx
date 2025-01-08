@@ -19,11 +19,16 @@ const ZaraDesign = () => {
         <img
           src={`${zaraImg.wireFrame}`}
           alt='Wire frame'
-          className='cursor-pointer h-full'
+          className='md:block hidden cursor-pointer h-full'
           onClick={() => openModal(zaraImg.wireFrame)}
         />
+        <img
+          src={`${zaraImg.wireFrame}`}
+          alt='Wire frame'
+          className='md:hidden block '
+        />
       </div>
-      <div className='mt-12 text-center'>
+      <div className='md:block hidden mt-12 text-center'>
         <p
           className='underline cursor-pointer'
           onClick={() => openModal(zaraImg.wireFrame)}>
