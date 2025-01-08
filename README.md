@@ -1,10 +1,16 @@
-# Launching david.decodes
+# david.decodes
 
 My profile coded in React Framework with Tailwind CSS.
 
 The code is destructured so that if any changes need to be made, I just need to edit the JS object that I have created inside `Context.jsx`. The React components uses the data context to then render specific parts of the webpage.
 
 I try to keep the jsx components below 100 lines when possible and destructure as much as I can to make it easy to read and understand.
+
+### Link
+
+https://david-decodes.web.app
+
+### Notes
 
 Tasks:
 
@@ -14,7 +20,7 @@ Tasks:
 - COMPLETED Develop Zara page (build out prototype, create skeleton HTML, styling, destructure)
 - COMPLETED Develop Depop page -> change layout
 - COMPLETED Deploy website
-- Compress / resize image to decrease loading time
+- COMPLETED Compress / resize image to decrease loading time
 
 Depop Page:
 
@@ -37,5 +43,5 @@ Zara Page:
 Daily Plan:
 
 - DONE One of the image is jutting out in Zara Page
-- (Priority next time)Issue with loading larger image (i.e. Wireframe onto webpage when deployed, need to consider alternative methd of uploading images)
+- (Priority next time) Issue with loading larger image (i.e. Wireframe onto webpage when deployed, need to consider alternative methd of uploading images)
 - DONE Organize code and remove redundancies
