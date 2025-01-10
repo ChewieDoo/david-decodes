@@ -13,8 +13,9 @@ const DepopResearch = () => {
           clothing on a mobile app?
         </h3>
         <p>
-          Desktop Research | Storyboarding | Speed-dating | User survey |
-          Persona Mapping
+          Desktop Research &nbsp; | &nbsp; Storyboarding &nbsp; | &nbsp;
+          Speed-dating &nbsp; | &nbsp; User survey &nbsp; | &nbsp; Persona
+          Mapping
         </p>
       </div>
 

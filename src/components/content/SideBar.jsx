@@ -86,8 +86,7 @@ const SideBar = () => {
                     to={caseStudies[0].link}
                     className={({ isActive }) =>
                       isActive ? "sidebar-item-active" : "sidebar-item"
-                    }
-                    target='_blank'>
+                    }>
                     Depop - Rent a Depoop
                   </NavLink>
                 </li>
@@ -97,8 +96,7 @@ const SideBar = () => {
                     to='/frictionless'
                     className={({ isActive }) =>
                       isActive ? "sidebar-item-active" : "sidebar-item"
-                    }
-                    target='_blank'>
+                    }>
                     Frictionless Fashion
                   </NavLink>
                 </li>
@@ -108,8 +106,7 @@ const SideBar = () => {
                     to={caseStudies[2].link}
                     className={({ isActive }) =>
                       isActive ? "sidebar-item-active" : "sidebar-item"
-                    }
-                    target='_blank'>
+                    }>
                     KPop - Web Development
                   </NavLink>
                 </li>

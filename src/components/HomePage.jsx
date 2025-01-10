@@ -50,7 +50,7 @@ const CaseStudyCard = ({ id }) => {
         <p className='casestudy-p-text mb-6 Sk-Modernist'>
           {caseStudies[id].text}
         </p>
-        <NavLink to={`${caseStudies[id].link}`} target='_blank'>
+        <NavLink to={`${caseStudies[id].link}`}>
           <button className='button-text button-box Sk-Modernist-Bold'>
             VIEW CASE STUDY
           </button>
