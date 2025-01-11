@@ -9,6 +9,7 @@ import DepopDesignFeature from "./depop/DepopDesignFeature";
 import DepopResearch from "./depop/DepopResearch";
 import DepopIterations from "./depop/DepopIterations";
 import DepopImpact from "./depop/DepopImpact";
+import DepopCatalog from "./depop/DepopCatalog";
 
 const DepopCaseStudy = () => {
   const { depopImg } = useImages();
@@ -24,6 +25,10 @@ const DepopCaseStudy = () => {
       <div>
         <SideBar />
       </div>
+      <div className='md:block hidden'>
+        <DepopCatalog />
+      </div>
+
       <div className='title-container-clear h-24 flex items-end'>
         <div className='h-full'>
           <img
@@ -41,19 +46,19 @@ const DepopCaseStudy = () => {
         <section className='tag-container-sm mt-3'>
           <DepopTags />
         </section>
-        <section className='section-container mt-16'>
+        <section id='The_problem' className='section-container mt-16'>
           <DepopSummary />
         </section>
-        <section className='section-container'>
+        <section id='Key_features' className='section-container'>
           <DepopDesignFeature />
         </section>
-        <section className='section-container'>
+        <section id='User_research' className='section-container'>
           <DepopResearch />
         </section>
-        <section className='section-container'>
+        <section id='Design_iterations' className='section-container'>
           <DepopIterations />
         </section>
-        <section className='section-container'>
+        <section id='Impact' className='section-container'>
           <DepopImpact />
         </section>
         <section className='mt-28 mb-36'>

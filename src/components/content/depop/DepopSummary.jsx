@@ -43,7 +43,7 @@ const DepopSummary = () => {
           </p>
         </div>
 
-        <div className='mb-[64px]'>
+        <section id='Outcome' className='mb-[64px]'>
           <h3 className='title-red mb-[20px]'>Outcome</h3>
           <p className='text-[22px]'>
             Integrated a rental tab to Depop’s product item page along with
@@ -52,7 +52,7 @@ const DepopSummary = () => {
             user journey with additional components such as ‘Available to rent’
             tags added to the UI.
           </p>
-        </div>
+        </section>
 
         <div className='md:flex md:flex-row'>
           <div className='md:pr-[124px] md:mb-[0px] mb-[32px]'>

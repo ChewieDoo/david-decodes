@@ -14,6 +14,8 @@ https://david-decodes.web.app
 
 Tasks:
 
+- COMPLETED Create navigatable table of contents
+- Add in a let's talk option at the bottom (email and linkedin?)
 - COMPLETED Figure out responsive CSS (when in mobile or smaller display size, wrap the social icons around)
 - COMPLETED Route up the links
 - COMPLETED Organize code into React framework (data context, Tailwind components, etc.)

@@ -11,6 +11,7 @@ import ZaraDiscover from "./zara/ZaraDiscover";
 import ZaraDefine from "./zara/ZaraDefine";
 import ZaraDesign from "./zara/ZaraDesign";
 import ZaraDeliver from "./zara/ZaraDeliver";
+import ZaraCatalog from "./zara/ZaraCatalog";
 
 const ZaraCaseStudy = () => {
   const { zaraImg } = useImages();
@@ -25,6 +26,9 @@ const ZaraCaseStudy = () => {
       </div>
       <div>
         <SideBar />
+      </div>
+      <div className='md:block hidden'>
+        <ZaraCatalog />
       </div>
       <div className='title-container h-24 flex items-end'>
         <div className='h-full'>
@@ -41,27 +45,27 @@ const ZaraCaseStudy = () => {
         <section className='tag-container mt-3'>
           <ZaraTags />
         </section>
-        <section className='section-container mt-16'>
+        <section id='Summary' className='section-container mt-16'>
           <ZaraSummary />
         </section>
-        <section className='section-container'>
+        <section id='Approach' className='section-container'>
           <ZaraApproach />
         </section>
         <div className='section-gray-background'>
-          <section className='section-container-wide py-5'>
+          <section id='Approach' className='section-container-wide py-5'>
             <ZaraProcess />
           </section>
         </div>
-        <section className='section-container'>
+        <section id='Discover' className='section-container'>
           <ZaraDiscover />
         </section>
-        <section className='section-container'>
+        <section id='Define' className='section-container'>
           <ZaraDefine />
         </section>
-        <section className='section-container'>
+        <section id='Design' className='section-container'>
           <ZaraDesign />
         </section>
-        <section className='section-container'>
+        <section id='Deliver' className='section-container'>
           <ZaraDeliver />
         </section>
         <section className='mt-28 mb-36'>
