@@ -6,6 +6,10 @@ The code is destructured so that if any changes need to be made, I just need to 
 
 I try to keep the jsx components below 100 lines when possible and destructure as much as I can to make it easy to read and understand.
 
+Added things ontoo my new laptop so just testing if things still work.
+
+
+
 ### Link
 
 https://david-decodes.web.app
