@@ -9,14 +9,13 @@ I try to keep the jsx components below 100 lines when possible and destructure a
 Added things ontoo my new laptop so just testing if things still work.
 
 
-
 ### Link
 
 https://david-decodes.web.app
 
 ### Notes
 
-Tasks:
+Tasks:  Checking some stuff
 
 - COMPLETED Create navigatable table of contents
 - Add in a let's talk option at the bottom (email and linkedin?)
