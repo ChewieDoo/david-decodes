@@ -93,6 +93,16 @@ const SideBar = () => {
 
                 <li className='mb-2'>
                   <NavLink
+                    to={caseStudies[2].link}
+                    className={({ isActive }) =>
+                      isActive ? "sidebar-item-active" : "sidebar-item"
+                    }>
+                    Potion - Note taking app
+                  </NavLink>
+                </li>
+
+                <li className='mb-2'>
+                  <NavLink
                     to='/frictionless'
                     className={({ isActive }) =>
                       isActive ? "sidebar-item-active" : "sidebar-item"
@@ -103,7 +113,7 @@ const SideBar = () => {
 
                 <li className='mb-2'>
                   <NavLink
-                    to={caseStudies[2].link}
+                    to={caseStudies[3].link}
                     className={({ isActive }) =>
                       isActive ? "sidebar-item-active" : "sidebar-item"
                     }>

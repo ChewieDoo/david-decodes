@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+
 import { useGlobalContext } from "../../context/Context";
 import { useImages } from "../../context/ImageContext";
 import SideBar from "./SideBar";
@@ -14,7 +16,12 @@ import ZaraDeliver from "./zara/ZaraDeliver";
 import ZaraCatalog from "./zara/ZaraCatalog";
 
 const ZaraCaseStudy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { zaraImg } = useImages();
+
   return (
     <div className='casestudy-text'>
       <div className='relative h-screen'>

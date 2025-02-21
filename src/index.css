@@ -137,6 +137,16 @@ body {
   border-radius: 110px;
 }
 
+.button-box-white {
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  border-radius: 110px;
+  border: 2px solid black;
+}
+
 .button-box:hover {
   background: black;
   color: white;
@@ -198,7 +208,7 @@ body {
 /* Animations */
 @layer components {
   .socials-icon {
-    @apply relative flex items-center justify-center w-8 h-8 bg-icon-gray bg-opacity-45 text-white hover:bg-opacity-75 rounded-3xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
+    @apply relative flex items-center justify-center w-8 h-8 bg-icon-gray bg-opacity-65 text-white hover:bg-opacity-100 rounded-3xl hover:rounded-lg transition-all duration-300 ease-linear cursor-pointer;
   }
 }
 

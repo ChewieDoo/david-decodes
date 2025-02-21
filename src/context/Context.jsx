@@ -34,9 +34,10 @@ const AppProvider = ({ children }) => {
       coverPhoto: potionMockup,
       themeColor: "tag-box-4",
       tags: ["Full-Stack Development", "TypeScript", "NextJS"],
-      name: "Note taking app",
+      name: "Potion - the note taking app",
       text: "Building productivity app with front-end inspired from Notion and back-end storing user credentials, documents, and more.",
       link: "https://potion-notes-cyan.vercel.app/",
+      codeSource: "https://github.com/ChewieDoo/notion-clone",
     },
     {
       id: 3,

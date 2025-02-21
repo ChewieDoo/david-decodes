@@ -1,4 +1,4 @@
-import { FaInstagram, FaGithub, FaYoutube } from "react-icons/fa6";
+import { FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { NavLink } from "react-router-dom";
 
@@ -75,19 +75,22 @@ const Socials = () => {
   };
 
   return (
-    <footer className='mt-12 md:mt-44'>
+    <footer className='mt-8 md:mt-36'>
+      <p className='mb-4 Sk-Modernist'>Let's talk &#58;&#41;</p>
       <div className='flex flex-row gap-4'>
-        <NavIcon
-          icon={<FaInstagram size='22' />}
-          href='https://www.instagram.com/jungkook_bighitentertainment/'></NavIcon>
+        <NavIcon icon={<MdEmail size='22' onClick={handleEmailClick} />} />
         <NavIcon
           icon={<FaGithub size='22' />}
-          href='https://github.com/ChewieDoo'></NavIcon>
+          href='https://github.com/ChewieDoo'
+        />
         <NavIcon
-          icon={<FaYoutube size='22' />}
-          href='https://www.youtube.com/@Zinggzouu'></NavIcon>
+          icon={<FaInstagram size='22' />}
+          href='https://www.instagram.com/jungkook_bighitentertainment/'
+        />
         <NavIcon
-          icon={<MdEmail size='22' onClick={handleEmailClick} />}></NavIcon>
+          icon={<FaLinkedin size='22' />}
+          href='https://www.linkedin.com/in/xdu071/'
+        />
       </div>
     </footer>
   );

@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+
 import { useImages } from "../../context/ImageContext";
 import SideBar from "./SideBar";
 import SmallFooter from "./SmallFooter";
@@ -12,7 +14,12 @@ import DepopImpact from "./depop/DepopImpact";
 import DepopCatalog from "./depop/DepopCatalog";
 
 const DepopCaseStudy = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { depopImg } = useImages();
+
   return (
     <div className='Sk-Modernist'>
       <div className='relative h-screen'>

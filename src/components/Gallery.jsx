@@ -1,6 +1,12 @@
+import { useEffect } from "react";
+
 import BlahBlah from "./BlahBlah";
 
 const Gallery = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='flex flex-col md:flex-row mt-9 mb-9 ml-9 mr-0.5'>
       <div className='w-full md:w-1/4'>

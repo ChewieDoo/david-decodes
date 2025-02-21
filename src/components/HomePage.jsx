@@ -1,9 +1,15 @@
+import { NavLink } from "react-router-dom";
+import { useEffect } from "react";
+
 import { useGlobalContext } from "../context/Context";
 import BlahBlah from "./BlahBlah";
-import { NavLink } from "react-router-dom";
 import SmallFooter from "./content/SmallFooter";
 
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className='flex flex-col md:flex-row my-9 ml-9 mr-0.5'>
       <div className='w-full md:w-1/4'>
@@ -20,8 +26,8 @@ const HomePage = () => {
       <div className='w-full md:w-3/4'>
         <div className='grid grid-cols-1 md:grid-cols-2'>
           <CaseStudyCard id='0' />
-          <CaseStudyCard id='1' />
           <CaseStudyCard id='2' />
+          <CaseStudyCard id='1' />
           <CaseStudyCard id='3' />
         </div>
         <SmallFooter />
@@ -34,7 +40,9 @@ const CaseStudyCard = ({ id }) => {
   const { caseStudies } = useGlobalContext();
   return (
     <div className='mr-8 mb-12'>
-      <img src={caseStudies[id].coverPhoto} className='mb-2.5'></img>
+      <NavLink to={`${caseStudies[id].link}`}>
+        <img src={caseStudies[id].coverPhoto} className='mb-2.5' />{" "}
+      </NavLink>
       <div className='mb-4'>
         <ul className='tag-text flex flex-row gap-1 Sk-Modernist-bold'>
           {caseStudies[id].tags.map((tag, index) => (
@@ -51,11 +59,28 @@ const CaseStudyCard = ({ id }) => {
         <p className='casestudy-p-text mb-6 Sk-Modernist'>
           {caseStudies[id].text}
         </p>
-        <NavLink to={`${caseStudies[id].link}`}>
-          <button className='button-text button-box Sk-Modernist-Bold'>
-            VIEW CASE STUDY
-          </button>
-        </NavLink>
+        {caseStudies[id].codeSource ? (
+          <div>
+            <NavLink to={`${caseStudies[id].link}`}>
+              <button className='button-text button-box Sk-Modernist-Bold'>
+                VIEW WEB APP
+              </button>
+            </NavLink>
+            <NavLink to={`${caseStudies[id].codeSource}`} className='ml-2'>
+              <button className='button-text button-box-white Sk-Modernist-Bold'>
+                VIEW SOURCE CODE
+              </button>
+            </NavLink>
+          </div>
+        ) : (
+          <div>
+            <NavLink to={`${caseStudies[id].link}`}>
+              <button className='button-text button-box Sk-Modernist-Bold'>
+                VIEW CASE STUDY
+              </button>
+            </NavLink>
+          </div>
+        )}
       </div>
     </div>
   );
