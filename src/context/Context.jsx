@@ -2,6 +2,7 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import depopMockup from "../assets/depop-mockup.jpg";
 import zaraMockup from "../assets/zara-mockup.jpg";
 import fearlessMockup from "../assets/fearless-mockup.jpg";
+import potionMockup from "../assets/potion-mockup.jpg";
 
 const AppContext = React.createContext();
 
@@ -29,6 +30,16 @@ const AppProvider = ({ children }) => {
     },
     {
       id: 2,
+      title: "Potion",
+      coverPhoto: potionMockup,
+      themeColor: "tag-box-4",
+      tags: ["Full-Stack Development", "TypeScript", "NextJS"],
+      name: "Note taking app",
+      text: "Building productivity app with front-end inspired from Notion and back-end storing user credentials, documents, and more.",
+      link: "https://potion-notes-cyan.vercel.app/",
+    },
+    {
+      id: 3,
       title: "Fearless",
       coverPhoto: fearlessMockup,
       themeColor: "tag-box-3",

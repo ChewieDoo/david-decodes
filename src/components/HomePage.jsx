@@ -22,6 +22,7 @@ const HomePage = () => {
           <CaseStudyCard id='0' />
           <CaseStudyCard id='1' />
           <CaseStudyCard id='2' />
+          <CaseStudyCard id='3' />
         </div>
         <SmallFooter />
       </div>

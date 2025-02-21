@@ -118,6 +118,16 @@ body {
   background: rgba(195, 254, 246, 0.5);
 }
 
+.tag-box-4 {
+  display: flex;
+  padding: 6px 15px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 110px;
+  background: #ECECEC;
+}
+
 .button-box {
   padding: 12px 20px;
   justify-content: center;
