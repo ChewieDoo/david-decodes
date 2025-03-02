@@ -66,7 +66,9 @@ const CaseStudyCard = ({ id }) => {
                 VIEW WEB APP
               </button>
             </NavLink>
-            <NavLink to={`${caseStudies[id].codeSource}`} className='ml-2'>
+            <NavLink
+              to={`${caseStudies[id].codeSource}`}
+              className='md:ml-2 ml-1'>
               <button className='button-text button-box-white Sk-Modernist-Bold'>
                 VIEW SOURCE CODE
               </button>
